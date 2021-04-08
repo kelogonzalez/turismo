@@ -57,7 +57,7 @@
                     <div class="row">
                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="NIT de la institución" name="institutionCode" required="" pattern="[0-9]{1,15}" maxlength="15" data-toggle="tooltip" data-placement="top" title="Solo números, máximo 15 caracteres">
+                                <input type="text" class="material-control tooltips-general" placeholder="RUC de la institución" name="institutionCode" required="" pattern="[0-9]{1,15}" maxlength="15" data-toggle="tooltip" data-placement="top" title="Solo números, máximo 15 caracteres">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>RUC de la institución</label>
@@ -69,13 +69,13 @@
                                 <label>Nombre de la institución</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Nombre del director o gerente de la institución" name="institutionDirector" required="" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ. ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Nombre del director o gerente de la institución">
+                                <input type="text" class="material-control tooltips-general" placeholder="Nombre del director" name="institutionDirector" required="" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ. ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Nombre del director o gerente de la institución">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Nombre del director</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Nombre del encargado de la biblioteca" name="institutionLibrarian" required="" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ. ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el nombre del encargado de la biblioteca">
+                                <input type="text" class="material-control tooltips-general" placeholder="Nombre del encargado del Catastro Turístico" name="institutionLibrarian" required="" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ. ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el nombre del encargado de la biblioteca">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Nombre del encargado del Catastro Turístico</label>
