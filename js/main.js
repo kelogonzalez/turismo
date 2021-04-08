@@ -8,7 +8,7 @@
         });
     });
     $('.mobile-menu-button').on('click', function(){
-        var mobileMenu=$('.navbar-lateral');	
+        var mobileMenu=$('.navbar-lateral');
         if(mobileMenu.css('display')=='none'){
             mobileMenu.fadeIn(300);
         }else{
@@ -31,32 +31,33 @@
             confirmButtonText: "Si, salir",
             cancelButtonText: "No, cancelar",
             animation: "slide-from-top",
-            closeOnConfirm: false 
+            closeOnConfirm: false
         },function(){
-            window.location=LinkExitSystem; 
-        });  
+            window.location=LinkExitSystem;
+        });
     });
     $('.search-book-button').click(function(e){
         e.preventDefault();
         var LinkSearchBook=$(this).attr("data-href");
         swal({
-           title: "¿Qué libro estás buscando?",
-           text: "Por favor escribe el título, autor o código del libro",
-           type: "input",   
+           title: "¿Qué Empresa estás buscando?",
+           text: "Por favor escribe el Nombre Comercial, Nombre de Propietario o Número de registro",
+           type: "input",
            showCancelButton: true,
            closeOnConfirm: false,
            animation: "slide-from-top",
            cancelButtonText: "Cancelar",
            confirmButtonText: "Buscar",
            confirmButtonColor: "#3598D9",
-           inputPlaceholder: "Escribe aquí el nombre de libro" }, 
+           inputPlaceholder: "Escribe aquí el nombre de la Empresa" },
       function(inputValue){
-           if (inputValue === false) return false;  
+           if (inputValue === false) return false;
 
            if (inputValue === "") {
-               swal.showInputError("Debes escribir el nombre del libro");     
-               return false;   
-           } 
+               swal.showInputError("Debes escribir el nombre de la Empresa");
+
+               return false;
+           }
             window.location=LinkSearchBook+"?bookName="+inputValue;
        });
     });

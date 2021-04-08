@@ -5,7 +5,7 @@
     <?php
         session_start();
         $LinksRoute="../";
-        include '../inc/links.php'; 
+        include '../inc/links.php';
     ?>
     <script src="../js/SendForm.js"></script>
     <script src="../js/jPages.js"></script>
@@ -21,19 +21,19 @@
     </script>
 </head>
 <body>
-    <?php 
+    <?php
         include '../library/configServer.php';
         include '../library/consulSQL.php';
         include '../process/SecurityAdmin.php';
-        include '../inc/NavLateral.php'; 
+        include '../inc/NavLateral.php';
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
-        <?php 
+        <?php
             include '../inc/NavUserInfo.php';
         ?>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Administración Usuarios</small></h1>
+              <h1 class="all-tittles">Sistema Turístico <small>Administración Usuarios</small></h1>
             </div>
         </div>
         <div class="container-fluid">
@@ -50,7 +50,7 @@
                     <img src="../assets/img/user01.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                    Bienvenido a la sección donde se encuentra el listado de los administradores, puedes desactivar la cuenta de cualquier administrador o eliminar los datos si no hay préstamos asociados a la cuenta
+                    Bienvenido a la sección donde se encuentra el listado de los administradores, puedes desactivar la cuenta de cualquier administrador o eliminar los datos.
                 </div>
             </div>
         </div>
@@ -128,9 +128,9 @@
                     <div class="full-reset users-option-right text-mutted">
                         <i class="zmdi zmdi-delete"></i>
                     </div>
-                    <?php endif; ?>  
+                    <?php endif; ?>
                 </div>
-            </li> 
+            </li>
             <?php
                         mysqli_free_result($checkAdminLoan);
                     } //end while

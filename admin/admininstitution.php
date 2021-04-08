@@ -5,24 +5,24 @@
     <?php
         session_start();
         $LinksRoute="../";
-        include '../inc/links.php'; 
+        include '../inc/links.php';
     ?>
     <script src="../js/SendForm.js"></script>
 </head>
 <body>
-    <?php 
+    <?php
         include '../library/configServer.php';
         include '../library/consulSQL.php';
         include '../process/SecurityAdmin.php';
         include '../inc/NavLateral.php';
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
-        <?php 
+        <?php
             include '../inc/NavUserInfo.php';
         ?>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Administración Institución</small></h1>
+              <h1 class="all-tittles">Sistema Turístico <small>Administración Institución</small></h1>
             </div>
         </div>
         <div class="container-fluid">
@@ -41,11 +41,11 @@
                 <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
                     Guarda los datos de tu institución, una vez almacenados los datos no podrás hacer más registros.
                     Puedes actualizar la información actual, o eliminar el registro completamente y añadir uno nuevo, siempre
-                    y cuando no hayas registrado libros.
+                    y cuando no hayas registrado empresas.
                 </div>
             </div>
         </div>
-        <?php 
+        <?php
             $checkInstitution=ejecutarSQL::consultar("SELECT * FROM institucion");
             $checktotal=mysqli_num_rows($checkInstitution);
             if($checktotal<=0){
@@ -101,7 +101,7 @@
                             <p class="text-center">
                                 <button type="reset" class="btn btn-info" style="margin-right: 20px;"><i class="zmdi zmdi-roller"></i> &nbsp;&nbsp; Limpiar</button>
                                 <button type="submit" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
-                            </p> 
+                            </p>
                        </div>
                    </div>
                </form>
@@ -170,12 +170,12 @@
                 <div class="title-flat-form"><i class="zmdi zmdi-delete"></i> &nbsp; Eliminar institución</div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <?php 
+                        <?php
                             $checkInstitutionBook=ejecutarSQL::consultar("SELECT * FROM libro");
                             if(mysqli_num_rows($checkInstitutionBook)>=1){
                                 echo '<p class="text-center"><button  class="btn btn-danger btn-lg" disabled="disabled"><i class="zmdi zmdi-delete"></i> &nbsp;&nbsp; Eliminar</button></p>';
                             }else{
-                                echo '<form action="../process/DeleteInstitution.php" method="post" class="form_SRCB" data-type-form="delete">   
+                                echo '<form action="../process/DeleteInstitution.php" method="post" class="form_SRCB" data-type-form="delete">
                                     <input value="'. $fila["CodigoInfraestructura"] .'" type="hidden" name="primaryKey">
                                     <p class="text-center"><button type="submit" class="btn btn-danger btn-lg"><i class="zmdi zmdi-delete"></i> &nbsp;&nbsp; Eliminar</button></p>
                                 </form>';
@@ -185,7 +185,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
         <?php
             }
             mysqli_free_result($checkInstitution);

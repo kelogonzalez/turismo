@@ -28,7 +28,7 @@
         ?>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Busqueda de libro</small></h1>
+              <h1 class="all-tittles">Sistema Turístico <small>Busqueda de Empresas</small></h1>
             </div>
         </div>
         <br><br><br>
@@ -152,7 +152,7 @@
         </nav>
         <?php
         }else{
-            echo '<h2 class="text-center"><i class="zmdi zmdi-mood-bad zmdi-hc-5x"></i><br><br>Lo sentimos, no hemos encontrado ningún libro que coincida con <strong>'.$BookNameSearch.'</strong> en el sistema</h2>';
+            echo '<h2 class="text-center"><i class="zmdi zmdi-mood-bad zmdi-hc-5x"></i><br><br>Lo sentimos, no hemos encontrado nada que coincida con <strong>'.$BookNameSearch.'</strong> en el sistema</h2>';
         }
         mysqli_free_result($checkNameBook);
         echo'<br><br><br><br><br><br>';
