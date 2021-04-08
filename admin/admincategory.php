@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Categorías</title>
+    <title>Actividades</title>
     <?php
         session_start();
         $LinksRoute="../";
-        include '../inc/links.php'; 
+        include '../inc/links.php';
     ?>
     <script src="../js/SendForm.js"></script>
 </head>
 <body>
-    <?php 
+    <?php
         include '../library/configServer.php';
         include '../library/consulSQL.php';
         include '../process/SecurityAdmin.php';
         include '../inc/NavLateral.php';
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
-        <?php 
+        <?php
             include '../inc/NavUserInfo.php';
         ?>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Administración Institución</small></h1>
+              <h1 class="all-tittles">Sistema Turístico <small>Administración Institución</small></h1>
             </div>
         </div>
         <div class="container-fluid">
             <ul class="nav nav-tabs nav-justified"  style="font-size: 17px;">
               <li role="presentation"><a href="admininstitution.php">Institución</a></li>
-              <li role="presentation"><a href="adminprovider.php">Proveedores</a></li>
+              <li role="presentation"><a href="adminprovider.php">Departamentos</a></li>
               <li role="presentation"  class="active"><a href="admincategory.php">Categorías</a></li>
               <li role="presentation"><a href="adminsection.php">Secciones</a></li>
             </ul>
@@ -74,7 +74,7 @@
                             <p class="text-center">
                                 <button type="reset" class="btn btn-info" style="margin-right: 20px;"><i class="zmdi zmdi-roller"></i> &nbsp;&nbsp; Limpiar</button>
                                 <button type="submit" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
-                            </p> 
+                            </p>
                        </div>
                     </div>
                 </form>

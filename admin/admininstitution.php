@@ -87,7 +87,7 @@
                                 <label>Teléfono</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Año lectivo" name="institutionYear" required="" pattern="[0-9]{1,4}" maxlength="4" data-toggle="tooltip" data-placement="top" title="Solo números, máximo 4 caracteres">
+                                <input type="text" class="material-control tooltips-general" placeholder="Año Fiscal" name="institutionYear" required="" pattern="[0-9]{1,4}" maxlength="4" data-toggle="tooltip" data-placement="top" title="Solo números, máximo 4 caracteres">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Año</label>

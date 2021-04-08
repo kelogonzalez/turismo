@@ -39,19 +39,24 @@
                                 <i class="zmdi zmdi-balance zmdi-hc-fw"></i>&nbsp;&nbsp; Datos institución
                             </a>
                         </li>
+
+
+<!--
                         <li>
                             <a href="<?php echo $LinkRouteAdmin; ?>adminprovider.php">
                                 <i class="zmdi zmdi-truck zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo proveedor
                             </a>
                         </li>
+-->
+
                         <li>
                             <a href="<?php echo $LinkRouteAdmin; ?>admincategory.php">
-                                <i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Nueva categoría
+                                <i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Nueva actividad
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo $LinkRouteAdmin; ?>adminsection.php">
-                                <i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>&nbsp;&nbsp; Nueva sección
+                                <i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo tipo de turismo
                             </a>
                         </li>
                     </ul>
@@ -68,19 +73,25 @@
                         </li>
                         <li>
                             <a href="<?php echo $LinkRouteAdmin; ?>adminteacher.php">
-                                <i class="zmdi zmdi-male-alt zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo docente
+                                <i class="zmdi zmdi-male-alt zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo personal
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo $LinkRouteAdmin; ?>adminstudent.php">
-                                <i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo estudiante
+                                <i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo usuario
                             </a>
                         </li>
+
+<!--
                         <li>
                             <a href="<?php echo $LinkRouteAdmin; ?>adminpersonal.php">
                                 <i class="zmdi zmdi-male-female zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo personal administrativo
                             </a>
                         </li>
+
+
+-->
+
                     </ul>
                 </li>
                 <li>
@@ -90,7 +101,7 @@
                     <ul class="list-unstyled">
                         <li>
                             <a class="btn-addBook" href="#" data-process="<?php echo $LinksRoute; ?>process/checkDataAdmin.php" data-href="<?php echo $LinkRouteAdmin; ?>admininventory.php">
-                                <i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo libro
+                                <i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Nueva Empresa
                             </a>
                         </li>
                         <li>

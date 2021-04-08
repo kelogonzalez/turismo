@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Docentes</title>
+    <title>Personal de Turismo</title>
     <?php
         session_start();
         $LinksRoute="../";
-        include '../inc/links.php'; 
+        include '../inc/links.php';
     ?>
     <script src="../js/jPages.js"></script>
     <script src="../js/SendForm.js"></script>
@@ -21,7 +21,7 @@
     </script>
 </head>
 <body>
-    <?php 
+    <?php
         include '../library/configServer.php';
         include '../library/consulSQL.php';
         include '../process/SecurityAdmin.php';
@@ -29,20 +29,20 @@
         $TeacherN=consultasSQL::CleanStringText($_GET['TeacherN']);
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
-        <?php 
+        <?php
             include '../inc/NavUserInfo.php';
         ?>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Administración Usuarios</small></h1>
+              <h1 class="all-tittles">Sistema de Turismo <small>Administración Usuarios</small></h1>
             </div>
         </div>
         <div class="conteiner-fluid">
             <ul class="nav nav-tabs nav-justified"  style="font-size: 17px;">
                 <li role="presentation"><a href="adminuser.php">Administradores</a></li>
-                <li role="presentation"  class="active"><a href="adminteacher.php">Docentes</a></li>
-                <li role="presentation"><a href="adminstudent.php">Estudiantes</a></li>
-                <li role="presentation"><a href="adminpersonal.php">Personal administrativo</a></li>
+                <li role="presentation"  class="active"><a href="adminteacher.php">Personal de Turismo</a></li>
+                <li role="presentation"><a href="adminstudent.php">Usuarios</a></li>
+              <!--  <li role="presentation"><a href="adminpersonal.php">Personal administrativo</a></li>-->
             </ul>
         </div>
         <div class="container-fluid"  style="margin: 50px 0;">
@@ -51,8 +51,8 @@
                     <img src="../assets/img/user02.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                    Bienvenido a la sección donde se encuentra el listado de docentes registrados en el sistema, puedes actualizar algunos datos de los docentes o eliminar el registro completo del docente siempre y cuando no tenga préstamos asociados.<br>
-                    <strong class="text-danger"><i class="zmdi zmdi-alert-triangle"></i> &nbsp; ¡Importante! </strong>Si eliminas el docente del sistema se borrarán todos los datos relacionados con él, incluyendo préstamos y registros en la bitácora.
+                    Bienvenido a la sección donde se encuentra el listado de empleados registrados en el sistema, puedes actualizar algunos datos del personal de turismo o eliminar el registro completo del empleado.<br>
+                    <strong class="text-danger"><i class="zmdi zmdi-alert-triangle"></i> &nbsp; ¡Importante! </strong>Si eliminas el empleado del sistema se borrarán todos los datos relacionados con él.
                 </div>
             </div>
         </div>
@@ -60,8 +60,8 @@
             <div class="row">
                 <div class="col-xs-12 lead">
                     <ol class="breadcrumb">
-                        <li><a href="adminteacher.php">Nuevo docente</a></li>
-                        <li class="active">listado de docentes</li>
+                        <li><a href="adminteacher.php">Nuevo Personal</a></li>
+                        <li class="active">listado de empleados</li>
                     </ol>
                 </div>
             </div>
@@ -69,18 +69,18 @@
         <div class="container-fluid">
             <form class="pull-right" style="width: 30% !important;" action="adminlistteacher.php" method="get" autocomplete="off">
                 <div class="group-material">
-                    <input type="search" style="display: inline-block !important; width: 70%;" class="material-control tooltips-general" placeholder="Buscar docente" name="TeacherN" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe los nombres,apellidos o DNI">
+                    <input type="search" style="display: inline-block !important; width: 70%;" class="material-control tooltips-general" placeholder="Buscar empleado" name="TeacherN" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe los nombres,apellidos o Cédula">
                     <button class="btn" style="margin: 0; height: 43px; background-color: transparent !important;">
                         <i class="zmdi zmdi-search" style="font-size: 25px;"></i>
                     </button>
                 </div>
             </form>
-            <h2 class="text-center all-tittles" style="clear: both; margin: 25px 0;">Listado de docentes</h2>
+            <h2 class="text-center all-tittles" style="clear: both; margin: 25px 0;">Listado de personal de turismo</h2>
             <div class="table-responsive">
                 <div class="div-table" style="margin:0 !important;">
                     <div class="div-table-row div-table-row-list" style="background-color:#DFF0D8; font-weight:bold;">
                         <div class="div-table-cell" style="width: 6%;">#</div>
-                        <div class="div-table-cell" style="width: 15%;">DUI/CÉDULA</div>
+                        <div class="div-table-cell" style="width: 15%;">CÉDULA</div>
                         <div class="div-table-cell" style="width: 15%;">Sección</div>
                         <div class="div-table-cell" style="width: 15%;">Apellidos</div>
                         <div class="div-table-cell" style="width: 15%;">Nombres</div>
@@ -166,7 +166,7 @@
                         }
                         echo '</ul><div class="holder"></div>';
                     }else{
-                        echo '<br><br><br><h2 class="text-center all-tittles">No hay docentes registrados en el sistema</h2><br><br><br>';
+                        echo '<br><br><br><h2 class="text-center all-tittles">No hay personal de turismo registrados en el sistema</h2><br><br><br>';
                     }
                     mysqli_free_result($selectAllTeachers);
                 }

@@ -86,7 +86,7 @@
                 }else if (data==="NotAvaliable"){
                     swal({
                        title:"¡Opción no disponible!",
-                       text:"No puedes registrar libros por el momento, primero debes de agregar los datos de la institución, proveedores y categorías. Ve a la opción Administración del menu",
+                       text:"No puedes registrar Empresas por el momento, primero debes de agregar los datos de la institución, proveedores y categorías. Ve a la opción Administración del menu",
                        type: "error",
                        confirmButtonText: "Aceptar"
                     });

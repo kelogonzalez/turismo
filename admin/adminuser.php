@@ -5,32 +5,32 @@
     <?php
         session_start();
         $LinksRoute="../";
-        include '../inc/links.php'; 
+        include '../inc/links.php';
     ?>
     <script src="../js/SendForm.js"></script>
 </head>
 <body>
-    <?php 
+    <?php
         include '../library/configServer.php';
         include '../library/consulSQL.php';
         include '../process/SecurityAdmin.php';
-        include '../inc/NavLateral.php'; 
+        include '../inc/NavLateral.php';
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
-        <?php 
+        <?php
             include '../inc/NavUserInfo.php';
         ?>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Administración Usuarios</small></h1>
+              <h1 class="all-tittles">Sistema Turístico <small>Administración Usuarios</small></h1>
             </div>
         </div>
         <div class="container-fluid">
             <ul class="nav nav-tabs nav-justified"  style="font-size: 17px;">
                 <li role="presentation"  class="active"><a href="adminuser.php">Administradores</a></li>
-                <li role="presentation"><a href="adminteacher.php">Docentes</a></li>
-                <li role="presentation"><a href="adminstudent.php">Estudiantes</a></li>
-                <li role="presentation"><a href="adminpersonal.php">Personal administrativo</a></li>
+                <li role="presentation"><a href="adminteacher.php">Personal de Turismo</a></li>
+                <li role="presentation"><a href="adminstudent.php">Usuarios</a></li>
+                <!--<li role="presentation"><a href="adminpersonal.php">Personal administrativo</a></li>-->
             </ul>
         </div>
         <div class="container-fluid"  style="margin: 50px 0;">
@@ -93,7 +93,7 @@
                             <p class="text-center">
                                 <button type="reset" class="btn btn-info" style="margin-right: 20px;"><i class="zmdi zmdi-roller"></i> &nbsp;&nbsp; Limpiar</button>
                                 <button type="submit" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
-                            </p> 
+                            </p>
                        </div>
                    </div>
                 </form>
