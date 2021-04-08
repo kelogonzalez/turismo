@@ -29,8 +29,8 @@
             <ul class="nav nav-tabs nav-justified"  style="font-size: 17px;">
               <li role="presentation"><a href="admininstitution.php">Institución</a></li>
               <li role="presentation"><a href="adminprovider.php">Departamentos</a></li>
-              <li role="presentation"  class="active"><a href="admincategory.php">Categorías</a></li>
-              <li role="presentation"><a href="adminsection.php">Secciones</a></li>
+              <li role="presentation"  class="active"><a href="admincategory.php">Actividades</a></li>
+              <li role="presentation"><a href="adminsection.php">Tipo de Turismo</a></li>
             </ul>
         </div>
         <div class="container-fluid"  style="margin: 50px 0;">
@@ -39,7 +39,7 @@
                     <img src="../assets/img/category.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                    Bienvenido a la sección para registrar nuevas categorías de libros, debes de llenar el siguiente formulario para registrar una categoría
+                    Bienvenido a la sección para registrar nuevas Actividades, debes de llenar el siguiente formulario para registrar una actividad
                 </div>
             </div>
         </div>
@@ -47,26 +47,26 @@
             <div class="row">
                 <div class="col-xs-12 lead">
                     <ol class="breadcrumb">
-                      <li class="active">Nueva categoría</li>
-                      <li><a href="adminlistcategory.php">Listado de categorías</a></li>
+                      <li class="active">Nueva actividad</li>
+                      <li><a href="adminlistcategory.php">Listado de actividades</a></li>
                     </ol>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
             <div class="container-flat-form">
-                <div class="title-flat-form title-flat-blue">Agregar una nueva categoría</div>
+                <div class="title-flat-form title-flat-blue">Agregar una nueva actividad</div>
                 <form action="../process/AddCategory.php" method="post" class="form_SRCB" data-type-form="save"  autocomplete="off">
                     <div class="row">
                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el código de categoría" name="categoryCode" required="" pattern="[0-9]{1,20}" maxlength="20" data-toggle="tooltip" data-placement="top" title="Solo números, máximo 20 caracteres">
+                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el código de actividad" name="categoryCode" required="" pattern="[0-9]{1,20}" maxlength="20" data-toggle="tooltip" data-placement="top" title="Solo números, máximo 20 caracteres">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Código de categoría</label>
+                                <label>Código de actividad</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el nombre de la categoría" name="categoryName" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el nombre de la categoría">
+                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el nombre de la actividad" name="categoryName" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el nombre de la actividad">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Nombre</label>
