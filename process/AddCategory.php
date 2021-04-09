@@ -11,8 +11,8 @@ if(mysqli_num_rows($checkCategory)<=0){
         if(consultasSQL::InsertSQL("categoria", "CodigoCategoria, Nombre", "'$categoryCode','$categoryName'")){
             echo '<script type="text/javascript">
                 swal({
-                   title:"¡Categoría registrada!",
-                   text:"Los datos de la categoría se almacenaron correctamente",
+                   title:"Actividad registrada!",
+                   text:"Los datos de la actividad se almacenaron correctamente",
                    type: "success",
                    confirmButtonText: "Aceptar"
                 });
@@ -20,33 +20,33 @@ if(mysqli_num_rows($checkCategory)<=0){
             </script>';
         }else{
             echo '<script type="text/javascript">
-                swal({ 
-                    title:"¡Ocurrió un error inesperado!", 
-                    text:"No se pudo registrar la categoría, por favor intente nuevamente", 
-                    type: "error", 
-                    confirmButtonText: "Aceptar" 
+                swal({
+                    title:"¡Ocurrió un error inesperado!",
+                    text:"No se pudo registrar la actividad, por favor intente nuevamente",
+                    type: "error",
+                    confirmButtonText: "Aceptar"
                 });
             </script>';
         }
     }else{
         echo '<script type="text/javascript">
-            swal({ 
-                title:"¡Ocurrió un error inesperado!", 
-                text:"El nombre ingresado ya existe, escribe otro nombre e intenta nuevamente", 
-                type: "error", 
-                confirmButtonText: "Aceptar" 
+            swal({
+                title:"¡Ocurrió un error inesperado!",
+                text:"El nombre ingresado ya existe, escribe otro nombre e intenta nuevamente",
+                type: "error",
+                confirmButtonText: "Aceptar"
             });
         </script>';
-    }   
+    }
 }else{
     echo '<script type="text/javascript">
-        swal({ 
-            title:"¡Ocurrió un error inesperado!", 
-            text:"El código ingresado ya existe, escribe otro código e intenta nuevamente", 
-            type: "error", 
-            confirmButtonText: "Aceptar" 
+        swal({
+            title:"¡Ocurrió un error inesperado!",
+            text:"El código ingresado ya existe, escribe otro código e intenta nuevamente",
+            type: "error",
+            confirmButtonText: "Aceptar"
         });
-    </script>'; 
+    </script>';
 }
 mysqli_free_result($checkCategory);
 mysqli_free_result($checkname);

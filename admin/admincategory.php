@@ -66,7 +66,7 @@
                                 <label>Código de actividad</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el nombre de la actividad" name="categoryName" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el nombre de la actividad">
+                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el nombre de la actividad" name="categoryName" required="" pattern="[a-zA-z0-9áéíóúÁÉÍÓÚñÑ-/ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el nombre de la actividad">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Nombre</label>

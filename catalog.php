@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Catálogo</title>
+    <title>Catálogo Turístico</title>
     <?php
         session_start();
         $LinksRoute="./";
-        include './inc/links.php'; 
+        include './inc/links.php';
     ?>
     <script type="text/javascript" src="js/jPages.js"></script>
     <script>
@@ -20,7 +20,7 @@
     </script>
 </head>
 <body>
-    <?php 
+    <?php
         include './library/configServer.php';
         include './library/consulSQL.php';
         include './process/SecurityUser.php';
@@ -28,12 +28,12 @@
         include './inc/NavLateral.php';
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
-        <?php 
-            include './inc/NavUserInfo.php';  
+        <?php
+            include './inc/NavUserInfo.php';
         ?>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Catálogo de libros</small></h1>
+              <h1 class="all-tittles">Sistema Turístico <small>Catálogo de Empresas</small></h1>
             </div>
         </div>
          <div class="container-fluid"  style="margin: 40px 0;">
@@ -42,7 +42,7 @@
                     <img src="assets/img/checklist.png" alt="pdf" class="img-responsive center-box" style="max-width: 110px;">
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                    Bienvenido al catálogo, selecciona una categoría de la lista para empezar, si deseas buscar un libro por nombre o título has click en el icono &nbsp; <i class="zmdi zmdi-search"></i> &nbsp; que se encuentra en la barra superior
+                    Bienvenido al catálogo, selecciona una categoría de la lista para empezar, si deseas buscar una empresa por nombre comercial o nombre de propietario has click en el icono &nbsp; <i class="zmdi zmdi-search"></i> &nbsp; que se encuentra en la barra superior
                 </div>
             </div>
         </div>
@@ -53,12 +53,12 @@
                 $checkCategory=ejecutarSQL::consultar("SELECT * FROM categoria order by Nombre ASC");
                 if(mysqli_num_rows($checkCategory)>0){
                     while($fila=mysqli_fetch_array($checkCategory, MYSQLI_ASSOC)){
-                        echo '<li class="list-catalog" data-code-category="'.$fila['CodigoCategoria'].'">'.$fila['Nombre'].'</li>'; 
-                    }  
+                        echo '<li class="list-catalog" data-code-category="'.$fila['CodigoCategoria'].'">'.$fila['Nombre'].'</li>';
+                    }
                 }else{
                     echo '<p class="lead text-center all-tittles">No hay categorías registradas</p>';
                 }
-                mysqli_free_result($checkCategory);  
+                mysqli_free_result($checkCategory);
                 echo '</ul></div>';
                 if($VarCategoryCatalog==''){
                     echo '<p class="text-center lead all-tittles" style="padding: 0 25px;">Selecciona una categoría para empezar</p><br><br><br><br><br><br>';
@@ -75,14 +75,14 @@
 
                 $totalregistros = mysqli_query($mysqli,"SELECT FOUND_ROWS()");
                 $totalregistros = mysqli_fetch_array($totalregistros, MYSQLI_ASSOC);
-        
+
                 $numeropaginas = ceil($totalregistros["FOUND_ROWS()"]/$regpagina);
 
                 if(mysqli_num_rows($checkCodeBook)>0){
                         $selectCategC=ejecutarSQL::consultar("SELECT * FROM categoria WHERE CodigoCategoria='".$VarCategoryCatalog."'");
                         $dataCategC=mysqli_fetch_array($selectCategC, MYSQLI_ASSOC);
                 ?>
-                <p class="text-center lead all-tittles text-lowercase" style="padding: 0 25px;">se muestra un total de <?php echo $totalregistros["FOUND_ROWS()"]; ?> libros en la categoría <?php echo $dataCategC['Nombre']; ?></p><br>
+                <p class="text-center lead all-tittles text-lowercase" style="padding: 0 25px;">se muestra un total de <?php echo $totalregistros["FOUND_ROWS()"]; ?> empresas en la categoría <?php echo $dataCategC['Nombre']; ?></p><br>
                 <div class="container-fluid">
                 <?php
 					mysqli_free_result($selectCategC);
@@ -154,8 +154,8 @@
 	                            </a>
 	                        </li>
 	                    <?php endif; ?>
-	                    
-	                    
+
+
 	                    <?php
 	                        for($i=1; $i <= $numeropaginas; $i++ ){
 	                            if($pagina == $i){
@@ -165,8 +165,8 @@
 	                            }
 	                        }
 	                    ?>
-	                    
-	                    
+
+
 	                    <?php if($pagina == $numeropaginas): ?>
 	                        <li class="disabled">
 	                            <a href="#" aria-label="Previous">
@@ -181,15 +181,15 @@
 	                        </li>
 	                    <?php endif; ?>
 	                </ul>
-	            </nav> 
-                <?php   
+	            </nav>
+                <?php
                     }else{
-                        echo '<br><br><br><p class="lead text-center all-tittles">No hay libros registrados en esta categoría</p><br><br><br><br><br><br>'; 
+                        echo '<br><br><br><p class="lead text-center all-tittles">No hay libros registrados en esta categoría</p><br><br><br><br><br><br>';
                     }
                     mysqli_free_result($checkCodeBook);
                 }
             }else{
-                echo '<br><br><br><p class="lead text-center all-tittles">No hay libros registrados en el sistema</p><br><br><br><br><br><br>';
+                echo '<br><br><br><p class="lead text-center all-tittles">No hay empresas registradas en el sistema</p><br><br><br><br><br><br>';
             }
             mysqli_free_result($checkingAllBooks);
         ?>

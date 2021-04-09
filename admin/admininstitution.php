@@ -28,9 +28,9 @@
         <div class="container-fluid">
             <ul class="nav nav-tabs nav-justified"  style="font-size: 17px;">
               <li role="presentation" class="active"><a href="admininstitution.php">Institución</a></li>
-              <li role="presentation"><a href="adminprovider.php">Proveedores</a></li>
-              <li role="presentation"><a href="admincategory.php">Categorías</a></li>
-              <li role="presentation"><a href="adminsection.php">Secciones</a></li>
+              <li role="presentation"><a href="adminprovider.php">Departamentos</a></li>
+              <li role="presentation"><a href="admincategory.php">Actividades</a></li>
+              <li role="presentation"><a href="adminsection.php">Tipo de Turismo</a></li>
             </ul>
         </div>
         <div class="container-fluid"  style="margin: 50px 0;">

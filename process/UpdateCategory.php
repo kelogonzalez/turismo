@@ -9,27 +9,27 @@ $categoryNameOld=consultasSQL::CleanStringText($_POST['categoryNameOld']);
 if($categoryCodeOld==$categoryCode){
     if(consultasSQL::UpdateSQL("categoria", "Nombre='$categoryName'", "CodigoCategoria='$categoryCodeOld'")){
         echo '<script type="text/javascript">
-            swal({ 
-                title:"¡Categoría actualizada!", 
-                text:"Los datos de la categoría se actualizaron correctamente", 
-                type: "success", 
-                confirmButtonText: "Aceptar" 
+            swal({
+                title:"¡Actividad actualizada!",
+                text:"Los datos de la actividad se actualizaron correctamente",
+                type: "success",
+                confirmButtonText: "Aceptar"
             },
-            function(isConfirm){  
-                if (isConfirm) {     
+            function(isConfirm){
+                if (isConfirm) {
                     location.reload();
-                } else {    
+                } else {
                     location.reload();
-                } 
+                }
             });
-        </script>'; 
+        </script>';
     }else{
         echo '<script type="text/javascript">
-            swal({ 
-                title:"¡Ocurrió un error inesperado!", 
-                text:"No se pudo actualizar la categoría, por favor intenta nuevamente", 
-                type: "error", 
-                confirmButtonText: "Aceptar" 
+            swal({
+                title:"¡Ocurrió un error inesperado!",
+                text:"No se pudo actualizar la actividad, por favor intenta nuevamente",
+                type: "error",
+                confirmButtonText: "Aceptar"
             });
         </script>';
     }
@@ -39,37 +39,37 @@ if($categoryCodeOld==$categoryCode){
         if(mysqli_num_rows($checkCategories1)<=0){
             if(consultasSQL::UpdateSQL("categoria", "CodigoCategoria='$categoryCode'", "CodigoCategoria='$categoryCodeOld'")){
                 echo '<script type="text/javascript">
-                    swal({ 
-                        title:"¡Categoría actualizada!", 
-                        text:"Los datos de la categoría se actualizaron correctamente", 
-                        type: "success", 
-                        confirmButtonText: "Aceptar" 
+                    swal({
+                        title:"¡Actividad actualizada!",
+                        text:"Los datos de la actividad se actualizaron correctamente",
+                        type: "success",
+                        confirmButtonText: "Aceptar"
                     },
-                    function(isConfirm){  
-                        if (isConfirm) {     
+                    function(isConfirm){
+                        if (isConfirm) {
                             location.reload();
-                        } else {    
+                        } else {
                             location.reload();
-                        } 
+                        }
                     });
-                </script>'; 
+                </script>';
             }else{
                 echo '<script type="text/javascript">
-                    swal({ 
-                        title:"¡Ocurrió un error inesperado!", 
-                        text:"No se pudo actualizar la categoría, por favor intenta nuevamente", 
-                        type: "error", 
-                        confirmButtonText: "Aceptar" 
+                    swal({
+                        title:"¡Ocurrió un error inesperado!",
+                        text:"No se pudo actualizar la actividad, por favor intenta nuevamente",
+                        type: "error",
+                        confirmButtonText: "Aceptar"
                     });
                 </script>';
             }
         }else{
             echo '<script type="text/javascript">
-                swal({ 
-                    title:"¡Ocurrió un error inesperado!", 
-                    text:"El código de la categoría ya está registrado en el sistema, por favor intenta nuevamente", 
-                    type: "error", 
-                    confirmButtonText: "Aceptar" 
+                swal({
+                    title:"¡Ocurrió un error inesperado!",
+                    text:"El código de la actividad ya está registrado en el sistema, por favor intenta nuevamente",
+                    type: "error",
+                    confirmButtonText: "Aceptar"
                 });
             </script>';
         }
@@ -83,37 +83,37 @@ if($categoryCodeOld==$categoryCode){
         if($checktotalCategories<=0 && $checktotalCategories2<=0 && $checktotalCategories3<=0){
             if(consultasSQL::UpdateSQL("categoria", "CodigoCategoria='$categoryCode',Nombre='$categoryName'", "CodigoCategoria='$categoryCodeOld'")){
                 echo '<script type="text/javascript">
-                    swal({ 
-                        title:"¡Categoría actualizada!", 
-                        text:"Los datos de la categoría se actualizaron correctamente", 
-                        type: "success", 
-                        confirmButtonText: "Aceptar" 
+                    swal({
+                        title:"¡Actividad actualizada!",
+                        text:"Los datos de la actividad se actualizaron correctamente",
+                        type: "success",
+                        confirmButtonText: "Aceptar"
                     },
-                    function(isConfirm){  
-                        if (isConfirm) {     
+                    function(isConfirm){
+                        if (isConfirm) {
                             location.reload();
-                        } else {    
+                        } else {
                             location.reload();
-                        } 
+                        }
                     });
-                </script>'; 
+                </script>';
             }else{
                 echo '<script type="text/javascript">
-                    swal({ 
-                        title:"¡Ocurrió un error inesperado!", 
-                        text:"No hemos podido actualizar los datos de la categoría, por favor intenta nuevamente", 
-                        type: "error", 
-                        confirmButtonText: "Aceptar" 
+                    swal({
+                        title:"¡Ocurrió un error inesperado!",
+                        text:"No hemos podido actualizar los datos de la actividad, por favor intenta nuevamente",
+                        type: "error",
+                        confirmButtonText: "Aceptar"
                     });
                 </script>';
             }
         }else{
             echo '<script type="text/javascript">
-                swal({ 
-                    title:"¡Ocurrió un error inesperado!", 
-                    text:"El nombre o código que acabas de introducir ya está registrado, por favor verifica e intenta nuevamente", 
-                    type: "error", 
-                    confirmButtonText: "Aceptar" 
+                swal({
+                    title:"¡Ocurrió un error inesperado!",
+                    text:"El nombre o código que acabas de introducir ya está registrado, por favor verifica e intenta nuevamente",
+                    type: "error",
+                    confirmButtonText: "Aceptar"
                 });
             </script>';
         }
