@@ -25,8 +25,8 @@ if(mysqli_num_rows($checkInst)>0){
         if(consultasSQL::InsertSQL("proveedor", "CodigoProveedor, Nombre, Email, Direccion, Telefono, ResponAtencion", "'$providerCode','$providerName','$providerEmail','$providerAddres','$providerPhone','$providerResponsible'")){
             echo '<script type="text/javascript">
                 swal({
-                   title:"¡Departamento registrado!",
-                   text:"Los datos del departamento se almacenaron exitosamente",
+                   title:"Tipo de Turismo registrado!",
+                   text:"Los datos del tipo se almacenaron exitosamente",
                    type: "success",
                    confirmButtonText: "Aceptar"
                 });
@@ -37,7 +37,7 @@ if(mysqli_num_rows($checkInst)>0){
             echo '<script type="text/javascript">
                 swal({
                    title:"¡Ocurrió un error inesperado!",
-                   text:"No se pudo registrar el departamento, por favor intenta nuevamente",
+                   text:"No se pudo registrar el tipo de turismo, por favor intenta nuevamente",
                    type: "error",
                    confirmButtonText: "Aceptar"
                 });

@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Registrar Libro</title>
+    <title>Registrar Empresa</title>
     <?php
         session_start();
         $LinksRoute="../";
-        include '../inc/links.php'; 
+        include '../inc/links.php';
     ?>
     <script src="../js/SendForm.js"></script>
 </head>
 <body>
-    <?php 
+    <?php
         include '../library/configServer.php';
         include '../library/consulSQL.php';
         include '../process/SecurityAdmin.php';
         include '../inc/NavLateral.php';
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
-        <?php 
+        <?php
             include '../inc/NavUserInfo.php';
         ?>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Añadir libro</small></h1>
+              <h1 class="all-tittles">Sistema Turístico <small>Añadir Empresa</small></h1>
             </div>
         </div>
         <div class="container-fluid"  style="margin: 50px 0;">
@@ -31,73 +31,73 @@
                     <img src="../assets/img/flat-book.png" alt="pdf" class="img-responsive center-box" style="max-width: 110px;">
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                    Bienvenido a la sección para agregar nuevos libros a la biblioteca, deberas de llenar todos los campos para poder registrar el libro
+                    Bienvenido a la sección para agregar nuevas empresas, deberas de llenar todos los campos para poder registrar.
                 </div>
             </div>
         </div>
         <div class="container-fluid">
             <form action="../process/AddBook.php" method="POST" id="saveData" autocomplete="off" enctype="multipart/form-data">
                 <div class="container-flat-form">
-                    <div class="title-flat-form title-flat-blue">Nuevo libro</div>
+                    <div class="title-flat-form title-flat-blue">Nueva empresa</div>
                     <div class="row">
                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-                            <legend><strong>Información básica</strong></legend><br>
+                            <legend><strong>Ficha Catastral Turística del cantón Naranjal</strong></legend><br>
                             <div class="group-material">
-                                <input type="text" class="tooltips-general material-control" placeholder="Escribe aquí el código del libro" name="bookCodeManual" pattern="[a-zA-Z0-9-]{1,100}" maxlength="100" data-toggle="tooltip" data-placement="top" title="Solamente números, letras y guiones">
+                                <input type="text" class="tooltips-general material-control" placeholder="Escribe aquí el numero de registro" name="bookCodeManual" pattern="[a-zA-Z0-9-]{1,100}" maxlength="100" data-toggle="tooltip" data-placement="top" title="Solamente números, letras y guiones">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Código de libro</label>
+                                <label>Número de Registro</label>
                             </div>
                             <div class="group-material">
-                                <span>Categoría</span>
-                                <select class="tooltips-general material-control" name="bookCategory" data-toggle="tooltip" data-placement="top" title="Elige la categoría del libro">
-                                    <option value="" disabled="" selected="">Selecciona una categoría</option>
+                                <span>Actividad</span>
+                                <select class="tooltips-general material-control" name="bookCategory" data-toggle="tooltip" data-placement="top" title="Elige la actividad de la empresa">
+                                    <option value="" disabled="" selected="">Selecciona una actividad</option>
                                     <?php
                                         $checkCategory= ejecutarSQL::consultar("SELECT * FROM categoria");
                                         while($fila=mysqli_fetch_array($checkCategory, MYSQLI_ASSOC)){
-                                            echo '<option value="'.$fila['CodigoCategoria'].'">'.$fila['Nombre'].'</option>'; 
+                                            echo '<option value="'.$fila['CodigoCategoria'].'">'.$fila['Nombre'].'</option>';
                                         }
                                         mysqli_free_result($checkCategory);
                                     ?>
                                 </select>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="tooltips-general material-control" placeholder="Escribe aquí el título o nombre del libro" name="bookName" required="" maxlength="70" data-toggle="tooltip" data-placement="top" title="Escribe el título o nombre del libro">
+                                <input type="text" class="tooltips-general material-control" placeholder="Escribe aquí el nombre de la empresa" name="bookName" required="" maxlength="70" data-toggle="tooltip" data-placement="top" title="Escribe el nombre de la empresa">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Título</label>
+                                <label>Nombre de la Empresa</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="tooltips-general material-control" placeholder="Escribe aquí el autor del libro" name="bookAutor" required="" maxlength="70" data-toggle="tooltip" data-placement="top" title="Escribe el nombre del autor del libro">
+                                <input type="text" class="tooltips-general material-control" placeholder="Escribe aquí la dirección " name="bookAutor" required="" maxlength="500" data-toggle="tooltip" data-placement="top" title="Escribe la dirección">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Autor</label>
+                                <label>Dirección</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="tooltips-general material-control" placeholder="Escribe aquí el país del libro" required="" name="bookCountry" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el país del libro">
+                                <input type="text" class="tooltips-general material-control" placeholder="Escribe aquí la parroquia" required="" name="bookCountry" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe la parroquia">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>País</label>
+                                <label>Parroquia</label>
                             </div>
                             <legend><strong>Otros datos</strong></legend><br>
                             <div class="group-material">
-                                <span>Proveedor</span>
-                                <select class="tooltips-general material-control" name="bookProvider" data-toggle="tooltip" data-placement="top" title="Elige el proveedor del libro">
-                                    <option value="" disabled="" selected="">Selecciona un proveedor</option>
+                                <span>Tipo de Turismo</span>
+                                <select class="tooltips-general material-control" name="bookProvider" data-toggle="tooltip" data-placement="top" title="Elige el tipo de turismo">
+                                    <option value="" disabled="" selected="">Selecciona el tipo de turismo</option>
                                     <?php
                                         $checkProvider= ejecutarSQL::consultar("select * from proveedor");
                                         while($fila=mysqli_fetch_array($checkProvider, MYSQLI_ASSOC)){
-                                            echo '<option value="'.$fila['CodigoProveedor'].'">'.$fila['Nombre'].'</option>'; 
+                                            echo '<option value="'.$fila['CodigoProveedor'].'">'.$fila['Nombre'].'</option>';
                                         }
                                         mysqli_free_result($checkProvider);
                                     ?>
                                 </select>
                             </div>
                            <div class="group-material">
-                               <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el año del libro" name="bookYear" required="" pattern="[0-9]{1,4}" maxlength="4" data-toggle="tooltip" data-placement="top" title="Solamente números, sin espacios">
+                               <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el teléfono de la empresa" name="bookYear" required="" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Solamente números, sin espacios">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Año</label>
+                                <label>Teléfono</label>
                            </div>
                             <div class="group-material">
                                 <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí la editorial del libro" name="bookEditorial" required="" maxlength="70" data-toggle="tooltip" data-placement="top" title="Editorial del libro">
