@@ -68,10 +68,10 @@
                                 <label>Nombre de la Empresa</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="tooltips-general material-control" placeholder="Escribe aquí la dirección " name="bookAutor" required="" maxlength="500" data-toggle="tooltip" data-placement="top" title="Escribe la dirección">
+                                <input type="text" class="tooltips-general material-control" placeholder="Escribe aquí la calle principal " name="bookAutor" required="" maxlength="500" data-toggle="tooltip" data-placement="top" title="Escribe la calle principal de la ubicación de la empresa">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Dirección</label>
+                                <label>Calle Principal</label>
                             </div>
                             <div class="group-material">
                                 <input type="text" class="tooltips-general material-control" placeholder="Escribe aquí la parroquia" required="" name="bookCountry" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe la parroquia">
@@ -83,7 +83,7 @@
                             <div class="group-material">
                                 <span>Tipo de Turismo</span>
                                 <select class="tooltips-general material-control" name="bookProvider" data-toggle="tooltip" data-placement="top" title="Elige el tipo de turismo">
-                                    <option value="" disabled="" selected="">Selecciona el tipo de turismo</option>
+                                    <option value="" disabled="" selected="">Clasificación MITUR</option>
                                     <?php
                                         $checkProvider= ejecutarSQL::consultar("select * from proveedor");
                                         while($fila=mysqli_fetch_array($checkProvider, MYSQLI_ASSOC)){
@@ -94,38 +94,42 @@
                                 </select>
                             </div>
                            <div class="group-material">
-                               <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el teléfono de la empresa" name="bookYear" required="" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Solamente números, sin espacios">
+                               <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el correo electrónico de la Empresa" name="bookYear"  maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe la email de la Empresa">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Teléfono</label>
+                                <label>Email</label>
                            </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí la editorial del libro" name="bookEditorial" required="" maxlength="70" data-toggle="tooltip" data-placement="top" title="Editorial del libro">
+                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el recinto/cooperativa de la empresa" name="bookEditorial" maxlength="70" data-toggle="tooltip" data-placement="top" title="Recinto/Cooperativa de la empresa">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Editorial</label>
+                                <label>Recinto / Cooperativa</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí la edición del libro" name="bookEdition" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Edición del libro">
+                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el barrio / ciudadela de la empresa" name="bookEdition" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe aqui el barrio / ciudadela de la empresa">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Edición</label>
+                                <label>Barrio / Ciudadela</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general"  placeholder="Escribe aquí la cantidad de libros que registraras" name="bookCopies" required=" "pattern="[0-9]{1,7}" maxlength="7" data-toggle="tooltip" data-placement="top" title="¿Cuántos libros registraras?">
+                                <input type="text" class="material-control tooltips-general"  placeholder="Escribe aquí la referencia de la ubicación" name="bookCopies"  maxlength="90" data-toggle="tooltip" data-placement="top" title="Escribe una referencia clara de la ubicación">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Ejemplares</label>
+                                <label>Referencia</label>
                             </div>
-                            <legend><strong>Ubicación, valor y resumen</strong></legend><br>
+                            <!--<legend><strong>Ubicación, valor y resumen</strong></legend><br>-->
                             <div class="group-material">
-                               <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí la ubicación del libro" name="bookLocation" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="¿Dónde se ubicara el libro?">
+                               <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el horario de atención" name="bookLocation" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Horarios de atención">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Ubicación</label>
+                                <label>Horario de atención</label>
                             </div>
-                            <div class="group-material">
+
+
+                    <div class="group-material">
+
                                 <span>Cargo</span>
+
                                 <select class="tooltips-general material-control" name="bookOffice" data-toggle="tooltip" data-placement="top" title="Elige el cargo del libro">
                                     <option value="" disabled="" selected="">Selecciona el cargo del libro</option>
                                     <option value="Entrega del ministerio">Entrega del ministerio</option>
@@ -135,24 +139,27 @@
                                     <option value="Otros">Otros</option>
                                 </select>
                             </div>
+
+
+
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el precio estimado del libro" name="bookEstimated" required="" pattern="[0-9.]{1,7}" maxlength="7" data-toggle="tooltip" data-placement="top" title="Sólo números y un punto si el valor posee decimales. Ejemplo: 7.79">
+                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el teléfono de la empresa" name="bookEstimated" required="" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Valor estimado</label>
+                                <label>Teléfono</label>
                             </div>
                             <div class="group-material">
-                                <span>Resumen del libro</span>
-                                <textarea class="material-control" name="bookDescription" rows="7" placeholder="Escribe aquí el resumen del libro"></textarea>
+                                <span>Observaciones / Necesidades</span>
+                                <textarea class="material-control" name="bookDescription" rows="7" placeholder="Escribe aquí las observaciones o necesidades de la empresa"></textarea>
                             </div>
-                            <legend><strong>Imágen y archivo PDF</strong></legend><br>
+                            <legend><strong>Foto del local y archivo PDF</strong></legend><br>
                             <div class="group-material">
-                                <span class="lead"><i class="zmdi zmdi-image"></i> Imágen</span>
+                                <span class="lead"><i class="zmdi zmdi-image"></i> Foto</span>
                                 <input type="file" name="bookPicture">
                                 <small>Archivos permitidos: jpg, png<br>Tamaño máximo: 5MB</small>
                             </div>
                             <div class="group-material">
-                                <span class="lead"><i class="zmdi zmdi-file"></i> PDF</span>
+                                <span class="lead"><i class="zmdi zmdi-file"></i>Ficha firmada en PDF</span>
                                 <input type="file" name="bookPDF">
                                 <small>Archivos permitidos: PDF<br>Tamaño máximo: 100MB</small>
                             </div>
