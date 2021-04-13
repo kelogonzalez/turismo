@@ -76,7 +76,7 @@
                 </p>
             </div>
             <div class="col-xs-6">
-                <h2 class="text-center all-tittles"><i class="zmdi zmdi-delete"></i> &nbsp; eliminar datos</h2>
+                <h2 class="text-center all-tittles"><i class="zmdi zmdi-delete"></i> &nbsp; Eliminar datos</h2>
                 <?php
                     $checkLoanBook2=ejecutarSQL::consultar("SELECT * FROM prestamo WHERE CodigoLibro='".$fila['CodigoLibro']."'");
                         if(mysqli_num_rows($checkLoanBook2)<=0){
