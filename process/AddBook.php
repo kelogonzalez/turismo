@@ -38,11 +38,11 @@ $numB=$checktotalBookReg+1;
 $bookCheckInstitution=ejecutarSQL::consultar("SELECT * FROM institucion");
 $dataInst=mysqli_fetch_array($bookCheckInstitution, MYSQLI_ASSOC);
 $bookInstitution=$dataInst['CodigoInfraestructura'];
-$codigo=""; 
-$longitud=4; 
-for ($i=1; $i<=$longitud; $i++){ 
-    $numero = rand(0,9); 
-    $codigo .= $numero; 
+$codigo="";
+$longitud=4;
+for ($i=1; $i<=$longitud; $i++){
+    $numero = rand(0,9);
+    $codigo .= $numero;
 }
 $bookCode="I".$dataInst['CodigoInfraestructura']."Y".$dataInst['Year']."C".$bookCategory."B".$numB."N".$codigo."";
 if(mysqli_num_rows($bookCheckInstitution)>0){
@@ -53,18 +53,18 @@ if(mysqli_num_rows($bookCheckInstitution)>0){
            if(consultasSQL::InsertSQL("libro", "CodigoLibro, CodigoLibroManual, CodigoCategoria, CodigoProveedor, CodigoInfraestructura, Autor, Pais, Year, Estimado, Titulo, Edicion, Ubicacion, Cargo, Editorial, Existencias, Prestado, Descripcion", "'$bookCode','$bookCodeManual','$bookCategory','$bookProvider','$bookInstitution','$bookAutor','$bookCountry','$bookYear','$bookEstimated','$bookName','$bookEdition','$bookLocation','$bookOffice','$bookEditorial','$bookCopies','$bookBorrowed','$bookDescription'")){
                echo '<script type="text/javascript">
                     swal({
-                       title:"¡Libro registrado!",
-                       text:"Los datos del libro se registraron correctamente",
+                       title:"Empresa registrada!",
+                       text:"Los datos de la empresa se registraron correctamente",
                        type: "success",
                        confirmButtonText: "Aceptar"
                     });
                     $("#saveData")[0].reset();
-                </script>'; 
+                </script>';
            }else{
             echo '<script type="text/javascript">
                 swal({
                    title:"¡Ocurrió un error inesperado!",
-                   text:"No se pudo registrar el libro, por favor intenta nuevamente",
+                   text:"No se pudo registrar la empresa, por favor intenta nuevamente",
                    type: "error",
                    confirmButtonText: "Aceptar"
                 });
@@ -132,8 +132,8 @@ if(mysqli_num_rows($bookCheckInstitution)>0){
               if(consultasSQL::InsertSQL("libro", "CodigoLibro, CodigoLibroManual, CodigoCategoria, CodigoProveedor, CodigoInfraestructura, Autor, Pais, Year, Estimado, Titulo, Edicion, Ubicacion, Cargo, Editorial, Existencias, Prestado, Imagen, PDF, Download, Descripcion", "'$bookCode','$bookCodeManual','$bookCategory','$bookProvider','$bookInstitution','$bookAutor','$bookCountry','$bookYear','$bookEstimated','$bookName','$bookEdition','$bookLocation','$bookOffice','$bookEditorial','$bookCopies','$bookBorrowed','$finalPictureName','$finalPDFName','$bookDownload','$bookDescription'")){
                 echo '<script type="text/javascript">
                     swal({
-                       title:"¡Libro registrado!",
-                       text:"Los datos del libro se registraron correctamente",
+                       title:"Empresa registrada!",
+                       text:"Los datos de la empresa se registraron correctamente",
                        type: "success",
                        confirmButtonText: "Aceptar"
                     });
@@ -143,7 +143,7 @@ if(mysqli_num_rows($bookCheckInstitution)>0){
                 echo '<script type="text/javascript">
                     swal({
                        title:"¡Ocurrió un error inesperado!",
-                       text:"No se pudo registrar el libro, por favor intenta nuevamente",
+                       text:"No se pudo registrar la empresa, por favor intenta nuevamente",
                        type: "error",
                        confirmButtonText: "Aceptar"
                     });
@@ -193,7 +193,7 @@ if(mysqli_num_rows($bookCheckInstitution)>0){
                confirmButtonText: "Aceptar"
             });
         </script>';
-    } 
+    }
 }else{
     echo '<script type="text/javascript">
         swal({
@@ -202,7 +202,7 @@ if(mysqli_num_rows($bookCheckInstitution)>0){
            type: "error",
            confirmButtonText: "Aceptar"
         });
-    </script>'; 
+    </script>';
 }
 mysqli_free_result($bookCheckInstitution);
 mysqli_free_result($checkAllBookReg);

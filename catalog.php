@@ -49,19 +49,19 @@
         <?php
             $checkingAllBooks=ejecutarSQL::consultar("SELECT * FROM libro");
             if(mysqli_num_rows($checkingAllBooks)>0){
-                echo '<div class="container-fluid" style="margin: 0 0 50px 0;"><h2 class="text-center" style="margin: 0 0 25px 0;">Categorías</h2><ul class="list-unstyled text-center list-catalog-container">';
+                echo '<div class="container-fluid" style="margin: 0 0 50px 0;"><h2 class="text-center" style="margin: 0 0 25px 0;">Actividades</h2><ul class="list-unstyled text-center list-catalog-container">';
                 $checkCategory=ejecutarSQL::consultar("SELECT * FROM categoria order by Nombre ASC");
                 if(mysqli_num_rows($checkCategory)>0){
                     while($fila=mysqli_fetch_array($checkCategory, MYSQLI_ASSOC)){
                         echo '<li class="list-catalog" data-code-category="'.$fila['CodigoCategoria'].'">'.$fila['Nombre'].'</li>';
                     }
                 }else{
-                    echo '<p class="lead text-center all-tittles">No hay categorías registradas</p>';
+                    echo '<p class="lead text-center all-tittles">No hay actividades registradas</p>';
                 }
                 mysqli_free_result($checkCategory);
                 echo '</ul></div>';
                 if($VarCategoryCatalog==''){
-                    echo '<p class="text-center lead all-tittles" style="padding: 0 25px;">Selecciona una categoría para empezar</p><br><br><br><br><br><br>';
+                    echo '<p class="text-center lead all-tittles" style="padding: 0 25px;">Selecciona una actividad para empezar</p><br><br><br><br><br><br>';
                 }else{
 
                 $mysqli = mysqli_connect(SERVER, USER, PASS, BD);
@@ -82,7 +82,7 @@
                         $selectCategC=ejecutarSQL::consultar("SELECT * FROM categoria WHERE CodigoCategoria='".$VarCategoryCatalog."'");
                         $dataCategC=mysqli_fetch_array($selectCategC, MYSQLI_ASSOC);
                 ?>
-                <p class="text-center lead all-tittles text-lowercase" style="padding: 0 25px;">se muestra un total de <?php echo $totalregistros["FOUND_ROWS()"]; ?> empresas en la categoría <?php echo $dataCategC['Nombre']; ?></p><br>
+                <p class="text-center lead all-tittles text-lowercase" style="padding: 0 25px;">se muestra un total de <?php echo $totalregistros["FOUND_ROWS()"]; ?> empresas en la actividad <?php echo $dataCategC['Nombre']; ?></p><br>
                 <div class="container-fluid">
                 <?php
 					mysqli_free_result($selectCategC);
@@ -103,16 +103,16 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xs-12 col-sm-6">
-                                <strong><i class="zmdi zmdi-account-box"></i> Autor </strong><br>
+                                <strong><i class="zmdi zmdi-account-box"></i> Dirección </strong><br>
                                 <?php echo $bookCodeInfo['Autor']; ?><br>
-                                <strong><i class="zmdi zmdi-edit"></i> Editorial </strong><br>
-                                <?php echo $bookCodeInfo['Editorial']; ?>
+                                <strong><i class="zmdi zmdi-edit"></i> Teléfono </strong><br>
+                                <?php echo $bookCodeInfo['Estimado']; ?>
                             </div>
                             <div class="col-xs-12 col-sm-6">
-                                <strong><i class="zmdi zmdi-globe"></i> País </strong><br>
+                                <strong><i class="zmdi zmdi-globe"></i> Parroquia </strong><br>
                                 <?php echo $bookCodeInfo['Pais']; ?><br>
-                                <strong><i class="zmdi zmdi-calendar-note"></i> Año </strong><br>
-                                <?php echo $bookCodeInfo['Year']; ?>
+                                <strong><i class="zmdi zmdi-calendar-note"></i> Horario </strong><br>
+                                <?php echo $bookCodeInfo['Ubicacion']; ?>
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                 <span class="btn-pdf-book text-mutted"><i class="zmdi zmdi-cloud-off"></i></span>
                 <span class="btn-watch-book text-mutted"><i class="zmdi zmdi-eye-off"></i></span>
 	            <?php endif; ?>
-	            <a href="#!" class="btn-info-book tooltips-general" data-placement="bottom" title="Préstamo" data-code-book="<?php echo $bookCodeInfo['CodigoLibro']; ?>">
+	            <a href="#!" class="btn-info-book tooltips-general" data-placement="bottom" title="Actualizar" data-code-book="<?php echo $bookCodeInfo['CodigoLibro']; ?>">
                             <i class="zmdi zmdi-library"></i>
                         </a>
                     </div>

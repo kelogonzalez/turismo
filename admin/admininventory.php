@@ -125,7 +125,14 @@
                                 <label>Horario de atención</label>
                             </div>
 
+                            <div class="group-material">
+                               <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el sitio web de la empresa" name="bookOffice"  maxlength="50" data-toggle="tooltip" data-placement="top" title="Sitio Web">
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Página Web</label>
+                            </div>
 
+<!--
                     <div class="group-material">
 
                                 <span>Cargo</span>
@@ -140,7 +147,7 @@
                                 </select>
                             </div>
 
-
+-->
 
                             <div class="group-material">
                                 <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el teléfono de la empresa" name="bookEstimated" required="" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
