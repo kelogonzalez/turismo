@@ -50,11 +50,15 @@
                 <div class="tile-name all-tittles">administradores</div>
                 <div class="tile-num full-reset"><?php echo mysqli_num_rows($checkAdmins); ?></div>
             </article>
+
+<!--
             <article class="tile" data-href="./admin/adminliststudent.php" data-num="<?php echo mysqli_num_rows($checkStudents); ?>">
                 <div class="tile-icon full-reset"><i class="zmdi zmdi-accounts"></i></div>
                 <div class="tile-name all-tittles">usuarios</div>
                 <div class="tile-num full-reset"><?php echo mysqli_num_rows($checkStudents); ?></div>
             </article>
+-->
+
             <article class="tile" data-href="./admin/adminlistteacher.php" data-num="<?php echo mysqli_num_rows($checkTeachers); ?>">
                 <div class="tile-icon full-reset"><i class="zmdi zmdi-male-alt"></i></div>
                 <div class="tile-name all-tittles"style="width: 90%;">personal turismo</div>
