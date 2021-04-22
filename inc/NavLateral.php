@@ -166,7 +166,11 @@
                 </li>
 
 -->
-
+<li>
+    <a href="<?php echo $LinkRoute; ?>localizador/index.html">
+        <i class="zmdi zmdi-pin zmdi-hc-fw"></i>&nbsp;&nbsp; Localizador en Mapa
+    </a>
+</li>
 
                 <li>
                     <a href="<?php echo $LinkRouteAdmin; ?>adminreport.php">
