@@ -79,26 +79,26 @@
                             ?>
                            <legend>Datos del estudiante</legend><br>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el NIE del alumno" name="studentNIE" required="" maxlength="20" data-toggle="tooltip" data-placement="top" title="NIE de estudiante">
+                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí la CI del usuario" name="studentNIE" required="" maxlength="20" data-toggle="tooltip" data-placement="top" title="CI de usuario">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>NIE</label>
+                                <label>CI</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí los nombres del alumno" name="studentName" required="" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Nombres del estudiante">
+                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí los nombres del usuario" name="studentName" required="" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Nombres del usuario">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Nombres</label>
                             </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí los apellidos del alumno" name="studentSurname" required="" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Apellidos del estudiante">
+                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí los apellidos del usuario" name="studentSurname" required="" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Apellidos del usuario">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Apellidos</label>
                             </div>
                            <div class="group-material">
                                 <span>Sección</span>
-                                <select class="material-control tooltips-general" name="studentSection" data-toggle="tooltip" data-placement="top" title="Elige la sección a la que pertenece el alumno">
+                                <select class="material-control tooltips-general" name="studentSection" data-toggle="tooltip" data-placement="top" title="Elige la sección a la que pertenece el usuario">
                                     <option value="" disabled="" selected="">Selecciona una sección</option>
                                     <?php
                                         if(mysqli_num_rows($checkTotalSection)>0){

@@ -5,7 +5,7 @@
     <?php
         session_start();
         $LinksRoute="../";
-        include '../inc/links.php'; 
+        include '../inc/links.php';
     ?>
     <link rel="stylesheet" href="../css/timeline.css">
     <script>
@@ -42,13 +42,13 @@
                 },function(){
                     window.open(file,"_blank");
                     swal.close();
-                }); 
+                });
             });
         });
     </script>
 </head>
 <body>
-    <?php 
+    <?php
         include '../library/configServer.php';
         include '../library/consulSQL.php';
         include '../library/SelectMonth.php';
@@ -56,12 +56,12 @@
         include '../inc/NavLateral.php';
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
-        <?php 
+        <?php
             include '../inc/NavUserInfo.php';
         ?>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Reportes y estadísticas</small></h1>
+              <h1 class="all-tittles">Sistema Turístico <small>Reportes y estadísticas</small></h1>
             </div>
         </div>
         <div class="container-fluid">
@@ -77,11 +77,17 @@
                                 <img src="../assets/img/pdf.png" alt="pdf" class="img-responsive center-box" style="max-width: 120px;">
                             </div>
                             <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                                Bienvenido al área de reportes, aquí puedes generar fichas de préstamos vacías de estudiantes, docentes o visitantes en formato pdf, también puedes generar reportes de inventario entre otros.
+                                Bienvenido al área de reportes, aquí puedes generar reportes de las empresas turísticas del cantón Naranjal.
                             </div>
                         </div>
                     </div>
                     <div class="container-fluid">
+
+
+
+<!--
+
+
                         <div class="row">
                             <div class="page-header">
                               <h2 class="all-tittles">fichas <small>vacías</small></h2>
@@ -119,6 +125,13 @@
                                 </div>
                             </div>
                         </div>
+
+-->
+
+
+
+
+
                         <div class="row">
                             <div class="page-header">
                               <h2 class="all-tittles">reportes <small>generales</small></h2>
@@ -128,7 +141,7 @@
                                     <p class="text-center">
                                         <i class="zmdi zmdi-trending-up zmdi-hc-5x btn-file" data-file="../report/ReportGeneral.php" data-type="report"></i>
                                     </p>
-                                    <h3 class="text-center">Reporte General de Inventario</h3>
+                                    <h3 class="text-center">Reporte General de las Empresas</h3>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-4">
@@ -136,9 +149,11 @@
                                     <p class="text-center">
                                         <i class="zmdi zmdi-trending-up zmdi-hc-5x btn-file" data-file="../report/ReportBookCategories.php" data-type="report"></i>
                                     </p>
-                                    <h3 class="text-center">Reporte Libros por Categoría</h3>
+                                    <h3 class="text-center">Reporte Empresas por Categoría</h3>
                                 </div>
                             </div>
+
+<!--
                             <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="full-reset report-content">
                                     <p class="text-center">
@@ -147,6 +162,8 @@
                                     <h3 class="text-center">Préstamos entregados (por usuarios)</h3>
                                 </div>
                             </div>
+
+
                             <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="full-reset report-content">
                                     <p class="text-center">
@@ -155,7 +172,14 @@
                                     <h3 class="text-center">Préstamos entregados (por sección)</h3>
                                 </div>
                             </div>
+
+                          -->
                         </div>
+
+
+<!--
+
+
                         <div class="row">
                             <div class="page-header">
                                 <h2 class="all-tittles">reportes <small>devoluciones pendientes</small></h2>
@@ -193,6 +217,10 @@
                                 </div>
                             </div>
                         </div>
+-->
+
+
+
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="bitacora">
@@ -202,7 +230,7 @@
                                 <img src="../assets/img/user-sesion.png" alt="users-sesion" class="img-responsive center-box" style="max-width: 120px;">
                             </div>
                             <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                                Bienvenido al área de bitácora, aquí se muestran los registros de los últimos 15 usuarios (personal administrativo, docentes, administradores y estudiantes) que han iniciado sesión en el sistema. Recuerda eliminar los registros de la bitácora cada año para que el sistema funcione correctamente.
+                                Bienvenido al área de bitácora, aquí se muestran los registros de los últimos 15 usuarios (Administradores, personal de turismo y usuarios en general) que han iniciado sesión en el sistema. Recuerda eliminar los registros de la bitácora cada año para que el sistema funcione correctamente.
                             </div>
                         </div>
                     </div>

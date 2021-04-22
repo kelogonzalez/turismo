@@ -29,8 +29,8 @@
             <ul class="nav nav-tabs nav-justified"  style="font-size: 17px;">
                 <li role="presentation"><a href="adminuser.php">Administradores</a></li>
                 <li role="presentation"  class="active"><a href="adminteacher.php">Personal de Turismo</a></li>
-                <li role="presentation"><a href="adminstudent.php">Usuarios</a></li>
-                <!--<li role="presentation"><a href="adminpersonal.php">Personal administrativo</a></li>-->
+                <!--<li role="presentation"><a href="adminstudent.php">Usuarios</a></li>
+                <li role="presentation"><a href="adminpersonal.php">Personal administrativo</a></li>-->
             </ul>
         </div>
         <div class="container-fluid"  style="margin: 50px 0;">

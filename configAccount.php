@@ -5,7 +5,7 @@
     <?php
         session_start();
         $LinksRoute="./";
-        include './inc/links.php'; 
+        include './inc/links.php';
     ?>
     <script src="./js/SendForm.js"></script>
     <script>
@@ -20,19 +20,19 @@
     </script>
 </head>
 <body>
-    <?php 
+    <?php
         include './library/configServer.php';
         include './library/consulSQL.php';
         include './process/SecurityUser.php';
         include './inc/NavLateral.php';
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
-        <?php 
-            include './inc/NavUserInfo.php';  
+        <?php
+            include './inc/NavUserInfo.php';
         ?>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Configuración de cuenta</small></h1>
+              <h1 class="all-tittles">Sistema Turístico <small>Configuración de cuenta</small></h1>
             </div>
         </div>
          <div class="container-fluid"  style="margin: 40px 0;">
@@ -102,7 +102,7 @@
                     <h4 class="modal-title text-center all-tittles">ayuda del sistema</h4>
                 </div>
                 <div class="modal-body">
-                    
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="zmdi zmdi-thumb-up"></i> &nbsp; De acuerdo</button>

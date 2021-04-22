@@ -5,39 +5,39 @@
     <?php
         session_start();
         $LinksRoute="../";
-        include '../inc/links.php'; 
+        include '../inc/links.php';
     ?>
     <script src="../js/SendForm.js"></script>
     <script>
         $(document).ready(function(){
             $('.btn-backup').on('click', function(){
-                swal({  
-                    title: "¿Quieres realizar la copia?",   
-                    text: "La copia de seguridad quedara guardada en el sistema. Podrás restaurar el sistema al punto actual  en caso de fallas",   
-                    type: "info",   
-                    showCancelButton: true,   
-                    closeOnConfirm: false,   
-                    showLoaderOnConfirm: true,    
+                swal({
+                    title: "¿Quieres realizar la copia?",
+                    text: "La copia de seguridad quedara guardada en el sistema. Podrás restaurar el sistema al punto actual  en caso de fallas",
+                    type: "info",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    showLoaderOnConfirm: true,
                     cancelButtonText: "Cancelar",
                     confirmButtonText: "Realizar copia",
                     animation: "slide-from-top"
-                }, function(){       
+                }, function(){
                     $.ajax({
                         url:"../process/Backup.php",
                         success:function(data){
                             if(data==="success"){
-                                swal({ 
-                                    title:"¡Copia de seguridad realizada!", 
-                                    text:"La copia de seguridad se realizó con éxito, podrás recuperar el sistema al estado actual si lo deseas", 
-                                    type: "success", 
-                                    confirmButtonText: "Aceptar" 
+                                swal({
+                                    title:"¡Copia de seguridad realizada!",
+                                    text:"La copia de seguridad se realizó con éxito, podrás recuperar el sistema al estado actual si lo deseas",
+                                    type: "success",
+                                    confirmButtonText: "Aceptar"
                                 },
-                                function(isConfirm){  
-                                    if (isConfirm) {     
+                                function(isConfirm){
+                                    if (isConfirm) {
                                         location.reload();
-                                    } else {    
+                                    } else {
                                         location.reload();
-                                    } 
+                                    }
                                 });
                             }else if (data==="error"){
                                 swal({
@@ -57,7 +57,7 @@
                         }
                     });
                     return false;
-                });  
+                });
             });
             $('.btn-restore').on('click', function(){
                 $('#ModalRestore').modal({
@@ -80,19 +80,19 @@
     </script>
 </head>
 <body>
-    <?php 
+    <?php
         include '../library/configServer.php';
         include '../library/consulSQL.php';
         include '../process/SecurityAdmin.php';
         include '../inc/NavLateral.php';
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
-        <?php 
+        <?php
             include '../inc/NavUserInfo.php';
         ?>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>configuraciones avanzadas</small></h1>
+              <h1 class="all-tittles">Sistema Turístico <small>configuraciones avanzadas</small></h1>
             </div>
         </div>
         <ul class="nav nav-tabs nav-justified" role="tablist">
@@ -110,7 +110,7 @@
                             Puedes realizar copias de seguridad de la base de datos en cualquier momento, también puedes restaurar el sistema a un punto de restauración que hayas creado previamente.
                         </div>
                     </div>
-                </div>  
+                </div>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
@@ -147,34 +147,42 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row">
+
+<!--
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="report-content">
                                 <p class="text-center"><i class="zmdi zmdi-calendar-close zmdi-hc-4x btn-delete" data-process="../process/DeleteAllLoans.php" data-text="todos los préstamos" data-type="delete"></i></p>
                                 <h3 class="text-center all-tittles">eliminar préstamos</h3>
                             </div>
                         </div>
+
+                      -->
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="report-content">
-                                <p class="text-center"><i class="zmdi zmdi-male-alt zmdi-hc-4x btn-delete" data-process="../process/DeleteAllUsers.php?userType=Teacher" data-text="todos los docentes" data-type="delete"></i></p>
-                                <h3 class="text-center all-tittles">eliminar docentes</h3>
+                                <p class="text-center"><i class="zmdi zmdi-male-alt zmdi-hc-4x btn-delete" data-process="../process/DeleteAllUsers.php?userType=Teacher" data-text="todos los empleados de turismo" data-type="delete"></i></p>
+                                <h3 class="text-center all-tittles">eliminar personal de turismo</h3>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="report-content">
-                                <p class="text-center"><i class="zmdi zmdi-accounts-alt zmdi-hc-4x btn-delete" data-process="../process/DeleteAllUsers.php?userType=Student" data-text="todos los estudiantes" data-type="delete"></i></p>
-                                <h3 class="text-center all-tittles">eliminar estudiantes</h3>
+                                <p class="text-center"><i class="zmdi zmdi-accounts-alt zmdi-hc-4x btn-delete" data-process="../process/DeleteAllUsers.php?userType=Student" data-text="todos los usuarios" data-type="delete"></i></p>
+                                <h3 class="text-center all-tittles">eliminar usuario</h3>
                             </div>
                         </div>
+<!--
+
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="report-content">
                                 <p class="text-center"><i class="zmdi zmdi-male-female zmdi-hc-4x btn-delete" data-process="../process/DeleteAllUsers.php?userType=Personal" data-text="todo el personal administrativo" data-type="delete"></i></p>
                                 <h3 class="text-center all-tittles">eliminar personal ad.</h3>
                             </div>
                         </div>
+
+                      -->
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="report-content">
-                                <p class="text-center"><i class="zmdi zmdi-book zmdi-hc-4x btn-delete" data-process="../process/DeleteAllBooks.php" data-text="todos los libros" data-type="delete"></i></p>
-                                <h3 class="text-center all-tittles">eliminar libros</h3>
+                                <p class="text-center"><i class="zmdi zmdi-book zmdi-hc-4x btn-delete" data-process="../process/DeleteAllBooks.php" data-text="todas las empresas" data-type="delete"></i></p>
+                                <h3 class="text-center all-tittles">eliminar empresas</h3>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-4">
@@ -186,7 +194,7 @@
                     </div>
                 </div>
             </div>
-        </div>      
+        </div>
         <div class="msjFormSend"></div>
         <div class="modal fade" tabindex="-1" role="dialog" id="ModalHelp">
           <div class="modal-dialog modal-lg">
@@ -221,7 +229,7 @@
                             <?php include '../inc/ListBackup.php'; ?>
                         </select>
                     </div>
-                    <legend><strong>Escribe tú nombre de usuario y contraseña</strong></legend><br>
+                    <legend><strong>Escribe tu nombre de usuario y contraseña</strong></legend><br>
                     <div class="group-material">
                         <input type="text" class="material-control" placeholder="Nombre de usuario" name="adminUserName" required="" maxlength="20" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,20}">
                         <span class="highlight"></span>
@@ -250,7 +258,7 @@
                 <h4 class="modal-title text-center all-tittles">eliminar <span id="text-modal"></span></h4>
               </div>
                 <div class="modal-body">
-                    <legend><strong>Escribe tú nombre de usuario y contraseña</strong></legend><br>
+                    <legend><strong>Escribe tu nombre de usuario y contraseña</strong></legend><br>
                     <input type="hidden" name="AdminCode" value="<?php echo $_SESSION['primaryKey']; ?>">
                     <div class="group-material">
                         <input type="text" class="material-control" placeholder="Nombre de usuario" name="adminUserName" required="" maxlength="20" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,20}">
