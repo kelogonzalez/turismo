@@ -1,7 +1,7 @@
 <img src="https://naranjal.gob.ec/sitio/wp-content/uploads/2019/10/Logo2-768x538.png">
 
 
-[Itur-App](https://naranjal.gob.ec) es un sistema de gestión de empresas turísticas. Itur-App proporciona una plataforma profesional y confiable para la Dirección de Turismo del Municipio de Naranjal, para poder registrar empresas como: bares, restaurantes, centros recreativos, sitios turísticos, etc.
+[Itur-App](https://naranjal.gob.ec) es un sistema de gestión de empresas turísticas. Itur-App proporciona una plataforma profesional y confiable para la Dirección de Turismo del Municipio de Naranjal, para poder registrar empresas como: bares, restaurantes, centros recreativos, sitios turísticos, etc. Y mantener un catastro turístico actualizado.
 
 ![screenshot](https://tastyigniter.com/assets/ui/images/mockups/Menus.png)
 
