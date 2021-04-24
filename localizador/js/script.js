@@ -154,10 +154,10 @@
 
           /* Add details to the individual listing. */
           var details = listing.appendChild(document.createElement('div'));
-          details.innerHTML = prop.address+' '+prop.city;
+          details.innerHTML = prop.address;
 
             details.innerHTML += '<br> Teléfono: ' + prop.phoneFormatted;
-
+            details.innerHTML += '<br> Email: ' + prop.city;
 
 
           link.addEventListener('click', function(e) {
