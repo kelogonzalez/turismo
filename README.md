@@ -1,16 +1,12 @@
 <img src="https://naranjal.gob.ec/images/iturp.png">
 
 
-[Itur-App](https://naranjal.gob.ec) es un sistema de gestión de empresas turísticas. Itur-App proporciona una plataforma profesional y confiable para la Dirección de Turismo del Municipio de Naranjal, para poder registrar empresas como: bares, restaurantes, centros recreativos, sitios turísticos, etc. Y mantener un catastro turístico actualizado.
+[Itur-System](https://naranjal.gob.ec) es un sistema de gestión de catastro para empresas turísticas. Itur-System proporciona una plataforma profesional y confiable para la Dirección de Turismo del Municipio de Naranjal, para poder registrar empresas como: bares, restaurantes, centros recreativos, sitios turísticos, etc. Y mantener un catastro turístico actualizado.
 
 ![screenshot](https://tastyigniter.com/assets/ui/images/mockups/Menus.png)
 
 ### Issues
 Informe los errores mediante el [Rastreador de problemas de Github](https://github.com/kelogonzalez/turismo/issues)
-
-### Stay in touch
-- [Follow us on Twitter](https://twitter.com/tastyigniter/) for announcements and updates.
-- [Blog](https://tastyigniter.com/blog) for tips and latest developments in the food industry.
 
 ## Contributing
 We would love your help building TastyIgniter! Please read the [Contributing Guidelines](CONTRIBUTING.md) to learn how you can help.
