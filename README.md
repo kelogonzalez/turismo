@@ -14,7 +14,7 @@ Informe los errores mediante el [Rastreador de problemas de Github](https://gith
 ## Contribución
 Gracias al equipo de desarrollo que hace posible Itur-System!
 
-<a href="https://github.com/kelogonzalez/turismo/graphs/contributors"><img src="https://avatars.githubusercontent.com/u/2976678?s=400&u=d97f835b5b0e79afc8b149eb9f30c1af75004722&v=4" /></a>
+<a href="https://github.com/kelogonzalez/turismo/graphs/contributors"><img src="https://opencollective.com/gadnaranjal/contributors.svg?width=890&button=false" /></a>
 
 ## Author
 Itur-System fué creado por [Kelo González](http://kelogonzalez.com).
