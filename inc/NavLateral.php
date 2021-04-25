@@ -8,11 +8,11 @@
             <i class="visible-xs zmdi zmdi-close pull-left mobile-menu-button" style="line-height: 55px; cursor: pointer; padding: 0 10px; margin-left: 7px;"></i>
             sistema de turismo
         </div>
-        <div class="full-reset" style="background-color:#2B3D51; padding: 10px 0; color:#fff;">
+        <div class="full-reset" style="background-color:#806f6b; padding: 10px 0; color:#fff;">
             <figure>
-                <img src="<?php echo $LinksRoute; ?>assets/img/logo.png" alt="Biblioteca" class="img-responsive center-box" style="width:55%;">
+                <img src="<?php echo $LinksRoute; ?>assets/img/iturp.png" alt="Biblioteca" class="img-responsive center-box" style="width:100%;">
             </figure>
-            <p class="text-center" style="padding-top: 15px;">Sistema Turístico</p>
+          <!--  <p class="text-center" style="padding-top: 15px;">Sistema Turístico</p> -->
         </div>
         <div class="full-reset nav-lateral-list-menu">
             <ul class="list-unstyled">
@@ -182,6 +182,12 @@
                         <i class="zmdi zmdi-wrench zmdi-hc-fw"></i>&nbsp;&nbsp; Configuraciones avanzadas
                     </a>
                 </li>
+                <figure>
+                    <img src="<?php echo $LinksRoute; ?>assets/img/logo.png" alt="Biblioteca" class="img-responsive center-box" style="width:76%;">
+                </figure>
+
+
+
                 <?php
                 endif;
                 ?>
