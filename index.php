@@ -35,7 +35,7 @@
             <div class="group-material">
                 <select class="material-control-login" name="UserType">
                     <option value="" disabled="" selected="">Tipo de usuario</option>
-                    <option value="Student">Usuario</option>
+                    <!--<option value="Student">Usuario</option>-->
                     <option value="Teacher">Personal de Turismo</option>
                   <!--  <option value="Personal">Personal administrativo</option>-->
                     <option value="Admin">Administrador</option>

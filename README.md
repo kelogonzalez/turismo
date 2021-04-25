@@ -5,6 +5,7 @@
 
 ![screenshot](https://naranjal.gob.ec/images/w1.png)
 ![screenshot](https://naranjal.gob.ec/images/wallpaper.png)
+![screenshot](https://naranjal.gob.ec/images/w2.png)
 
 ### Issues
 Informe los errores mediante el [Rastreador de problemas de Github](https://github.com/kelogonzalez/turismo/issues)
