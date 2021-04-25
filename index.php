@@ -11,9 +11,13 @@
 </head>
 <body class="full-cover-background" style="background-image:url(assets/img/font-login.JPG);">
     <div class="form-container">
+      <figure>
+          <img src="<?php echo $LinksRoute; ?>assets/img/iturp.png" alt="Biblioteca" class="img-responsive center-box" style="width:100%;">
+      </figure>
         <p class="text-center" style="margin-top: 17px;">
            <i class="zmdi zmdi-account-circle zmdi-hc-5x"></i>
        </p>
+
        <h4 class="text-center all-tittles" style="margin-bottom: 30px;">inicia sesión con tu cuenta</h4>
        <form action="process/login.php" method="post" class="form_SRCB" data-type-form="login" autocomplete="off">
             <div class="group-material-login">
