@@ -75,7 +75,7 @@
                 <div class="tile-name all-tittles">proveedores</div>
                 <div class="tile-num full-reset"><?php echo mysqli_num_rows($checkProviders); ?></div>
             </article>-->
-            <article class="tile" data-href="./catalog.php" data-num="<?php echo $totalBooks; ?>">
+            <article class="tile" data-href="./catalog.php" data-num="<?php echo mysqli_num_rows($checkCategories); ?>">
                 <div class="tile-icon full-reset"><i class="zmdi zmdi-book"></i></div>
                 <div class="tile-name all-tittles">empresa</div>
                 <div class="tile-num full-reset"><?php echo $totalBooks; ?></div>

@@ -111,13 +111,23 @@
                                 <span class="bar"></span>
                                 <label>Barrio / Ciudadela</label>
                             </div>
+
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general"  placeholder="Escribe aquí la referencia de la ubicación" name="bookCopies"  maxlength="90" data-toggle="tooltip" data-placement="top" title="Escribe una referencia clara de la ubicación">
+                                <input type="text" class="material-control tooltips-general"  placeholder="Escribe aquí la referencia de la ubicación" name="bookReferencia"  maxlength="90" data-toggle="tooltip" data-placement="top" title="Escribe una referencia clara de la ubicación" >
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Referencia</label>
+                            </div>
+
+
+                            <div class="group-material">
+                                <input type="hidden" value="1" class="material-control tooltips-general"  placeholder="Escribe aquí la referencia de la ubicación" name="bookCopies"  maxlength="90" data-toggle="tooltip" data-placement="top" title="Escribe una referencia clara de la ubicación" >
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Referencia</label>
                             </div>
                             <!--<legend><strong>Ubicación, valor y resumen</strong></legend><br>-->
+
                             <div class="group-material">
                                <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el horario de atención" name="bookLocation" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Horarios de atención">
                                 <span class="highlight"></span>
@@ -196,16 +206,301 @@
       <label>E. Genero</label>
   </div>
 
-<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
-<legend><strong>Especificaciones (Aplicar según corresponda)</strong></legend><br>
+  <legend><strong>Especificaciones (Aplicar según corresponda)</strong></legend><br>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookReservas" maxlength="2" data-toggle="tooltip" data-placement="top" title="Reservas">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Reservas</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí cuantas habitaciones simples tiene" name="bookSimples" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Habitaciones Simples</label>
+  </div>
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí cuantas habitaciones dobles tiene" name="bookDobles" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Habitaciones Dobles</label>
+  </div>
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí cuantas habitaciones triples tiene" name="bookTriples" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Habitaciones Triples</label>
+  </div>
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí cuantas habitaciones matrimoniales tiene" name="bookMatrimonio" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Habitaciones Matrimoniales</label>
+  </div>
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí cuantas habitaciones familiares tiene" name="bookFamilia" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Habitaciones Familiares</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el total de camas que tiene" name="bookCamas" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Total de camas</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el total de plazas que tiene" name="bookPlazas" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Total de plazas</label>
+  </div>
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el total de mesas que tiene" name="bookMesas" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Total de mesas</label>
+  </div>
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el total de baños para hombres que tiene" name="bookBanosHombres" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Total de baños para hombres</label>
+  </div>
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el total de baños para mujeres que tiene" name="bookBanosMujeres" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Total de baños para mujeres</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookEscape" maxlength="2" data-toggle="tooltip" data-placement="top" title="Salida de Escape">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Salidas de escape</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el tipo de pago" name="bookPagos" maxlength="100" data-toggle="tooltip" data-placement="top" title="Efectivo, tarjeta de credito, canje, etc...">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Tipos de pago</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookParqueaderos" maxlength="2" data-toggle="tooltip" data-placement="top" title="Parqueaderos">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Parqueadero</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe con que tipo de seguridad cuentan" name="bookSeguridad" maxlength="100" data-toggle="tooltip" data-placement="top" title="Guardiania, Cámaras, etc...">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Seguridad</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookMascotas" maxlength="2" data-toggle="tooltip" data-placement="top" title="Mascotas">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Mascotas</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookLimpieza" maxlength="2" data-toggle="tooltip" data-placement="top" title="Limpieza">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Limpieza</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookFolleteria" maxlength="2" data-toggle="tooltip" data-placement="top" title="Folleteria">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Inf/Folleteria</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe otros medios de promoción" name="bookPromocion" maxlength="100" data-toggle="tooltip" data-placement="top" title="Radio, Televisión, Internet, etc...">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Otros medios de promoción</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookCapacitacion" maxlength="2" data-toggle="tooltip" data-placement="top" title="Capacitación">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Capacitación del personal</label>
+  </div>
+
+<legend><strong>Vehiculos</strong></legend><br>
 
 <div class="group-material">
-    <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí cuantas personas con E. Genero trabajan en la empresa" name="bookGenero" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí la capacidad de carga" name="bookCapacidad" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
     <span class="highlight"></span>
     <span class="bar"></span>
-    <label>Reservas</label>
+    <label>Capacidad de carga</label>
 </div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookSenaletica" maxlength="2" data-toggle="tooltip" data-placement="top" title="Señaletica">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Señaletica</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookWifi" maxlength="2" data-toggle="tooltip" data-placement="top" title="Accesibilidad / Wifi">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Accesibilidad / Wifi</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookOperadores" maxlength="2" data-toggle="tooltip" data-placement="top" title="Operadores">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Operadores / Agencias / Guias</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí los N° de turnos" name="bookTurnos" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>N° de Turnos</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookBicicletas" maxlength="2" data-toggle="tooltip" data-placement="top" title="Portabicicletas">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Portabicicletas</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookMaleteros" maxlength="2" data-toggle="tooltip" data-placement="top" title="Maleteros">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Maleteros</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookChalecos" maxlength="2" data-toggle="tooltip" data-placement="top" title="Chalecos salvavidas">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Chalecos salvavidas</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe el nombre de la compañia" name="bookCompania" maxlength="100" data-toggle="tooltip" data-placement="top" title="Compañia">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Compañia</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe el tipo de licencia" name="bookLicencias" maxlength="1" data-toggle="tooltip" data-placement="top" title="A, B, C...">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Tipo de licencia</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookBoton" maxlength="2" data-toggle="tooltip" data-placement="top" title="Botón o cámara">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Botón o cámara</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookCinturones" maxlength="2" data-toggle="tooltip" data-placement="top" title="Cinturones de seguridad">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Cinturones de seguridad</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el N° de vehiculos" name="bookVehiculos" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>N° de Vehiculos</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el N° de pasajeros" name="bookPasajeros" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Pasajeros</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el N° de socios" name="bookSocios" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Total de socios</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí el N° de choferes" name="bookChoferes" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Choferes</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookAsientos" maxlength="2" data-toggle="tooltip" data-placement="top" title="Asientos Reclinables">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Asientos reclinables</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookTV" maxlength="2" data-toggle="tooltip" data-placement="top" title="Servicio de TV">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Servicio de TV</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookAC" maxlength="2" data-toggle="tooltip" data-placement="top" title="Servicio de A/C">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Servicio de A/C</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe Si o No" name="bookMicrofono" maxlength="2" data-toggle="tooltip" data-placement="top" title="Servicio de microfono">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Servicio de microfono</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe el estado" name="bookEstado" maxlength="100" data-toggle="tooltip" data-placement="top" title="Excelente, Bueno, Muy Bueno, etc...">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Estado</label>
+</div>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe el sector turístico" name="bookSector" maxlength="100" data-toggle="tooltip" data-placement="top" title="Sector Turístico">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Sector Turístico</label>
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+
 
 
 
