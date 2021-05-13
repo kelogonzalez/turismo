@@ -155,6 +155,62 @@
                                 <span class="bar"></span>
                                 <label>Teléfono</label>
                             </div>
+
+
+<!--NUEVOS CAMPOS -->
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí los idiomas que maneja la empresa" name="bookIdioma" maxlength="200" data-toggle="tooltip" data-placement="top" title="Idioma">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Idioma</label>
+</div>
+
+  <legend><strong>Personal que labora</strong></legend><br>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí cuantos hombres trabajan en la empresa" name="bookHombres" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Hombres</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí cuantas mujeres trabajan en la empresa" name="bookMujeres" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Mujeres</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí cuantas personas con discapacidad trabajan en la empresa" name="bookDiscapacidad" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Con Discapacidad</label>
+  </div>
+
+  <div class="group-material">
+      <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí cuantas personas con E. Genero trabajan en la empresa" name="bookGenero" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>E. Genero</label>
+  </div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+<legend><strong>Especificaciones (Aplicar según corresponda)</strong></legend><br>
+
+<div class="group-material">
+    <input type="text" class="material-control tooltips-general" placeholder="Escribe aquí cuantas personas con E. Genero trabajan en la empresa" name="bookGenero" pattern="[0-9]{1,10}" maxlength="10" data-toggle="tooltip" data-placement="top" title="Sólo números">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Reservas</label>
+</div>
+
+
+
+
+
                             <div class="group-material">
                                 <span>Observaciones / Necesidades</span>
                                 <textarea class="material-control" name="bookDescription" rows="7" placeholder="Escribe aquí las observaciones o necesidades de la empresa"></textarea>

@@ -76,13 +76,14 @@
                                 <i class="zmdi zmdi-male-alt zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo personal
                             </a>
                         </li>
+<!--
                         <li>
                             <a href="<?php echo $LinkRouteAdmin; ?>adminstudent.php">
                                 <i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo usuario
                             </a>
                         </li>
 
-<!--
+
                         <li>
                             <a href="<?php echo $LinkRouteAdmin; ?>adminpersonal.php">
                                 <i class="zmdi zmdi-male-female zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo personal administrativo

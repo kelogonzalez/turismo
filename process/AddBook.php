@@ -16,6 +16,20 @@ $bookBorrowed=0;
 $bookLocation=consultasSQL::CleanStringText($_POST['bookLocation']);
 $bookOffice=consultasSQL::CleanStringText($_POST['bookOffice']);
 $bookEstimated=consultasSQL::CleanStringText($_POST['bookEstimated']);
+
+
+
+$bookIdioma=consultasSQL::CleanStringText($_POST['bookIdioma']);
+$bookHombres=consultasSQL::CleanStringText($_POST['bookHombres']);
+$bookMujeres=consultasSQL::CleanStringText($_POST['bookMujeres']);
+$bookDiscapacidad=consultasSQL::CleanStringText($_POST['bookDiscapacidad']);
+$bookGenero=consultasSQL::CleanStringText($_POST['bookGenero']);
+
+
+
+
+
+
 $bookPictureTMP=consultasSQL::CleanStringText($_FILES['bookPicture']['tmp_name']);
 $bookPictureName=consultasSQL::CleanStringText($_FILES['bookPicture']['name']);
 $bookPictureType=consultasSQL::CleanStringText($_FILES['bookPicture']['type']);
@@ -50,7 +64,7 @@ if(mysqli_num_rows($bookCheckInstitution)>0){
       if(($bookPictureType=="image/jpeg"||$bookPictureType=="image/png"||$bookPictureType=="")&&($bookPDFType=="application/pdf"||$bookPDFType=="")){
         if(($bookPictureSize/1024)<=$bookPictureMaxSize && ($bookPDFSize/1024)<=$bookPDFMaxSize){
           if($bookPictureType=="" && $bookPDFType==""){
-           if(consultasSQL::InsertSQL("libro", "CodigoLibro, CodigoLibroManual, CodigoCategoria, CodigoProveedor, CodigoInfraestructura, Autor, Pais, Year, Estimado, Titulo, Edicion, Ubicacion, Cargo, Editorial, Existencias, Prestado, Descripcion", "'$bookCode','$bookCodeManual','$bookCategory','$bookProvider','$bookInstitution','$bookAutor','$bookCountry','$bookYear','$bookEstimated','$bookName','$bookEdition','$bookLocation','$bookOffice','$bookEditorial','$bookCopies','$bookBorrowed','$bookDescription'")){
+           if(consultasSQL::InsertSQL("libro", "CodigoLibro, CodigoLibroManual, CodigoCategoria, CodigoProveedor, CodigoInfraestructura, Autor, Pais, Year, Estimado, idioma, hombres, mujeres, discapacidad, genero, Titulo, Edicion, Ubicacion, Cargo, Editorial, Existencias, Prestado, Descripcion", "'$bookCode','$bookCodeManual','$bookCategory','$bookProvider','$bookInstitution','$bookAutor','$bookCountry','$bookYear','$bookEstimated','$bookIdioma','$bookHombres','$bookMujeres','$bookDiscapacidad','$bookGenero','$bookName','$bookEdition','$bookLocation','$bookOffice','$bookEditorial','$bookCopies','$bookBorrowed','$bookDescription'")){
                echo '<script type="text/javascript">
                     swal({
                        title:"Empresa registrada!",
@@ -129,7 +143,7 @@ if(mysqli_num_rows($bookCheckInstitution)>0){
               $moveFile=FALSE;
             }
             if($moveFile){
-              if(consultasSQL::InsertSQL("libro", "CodigoLibro, CodigoLibroManual, CodigoCategoria, CodigoProveedor, CodigoInfraestructura, Autor, Pais, Year, Estimado, Titulo, Edicion, Ubicacion, Cargo, Editorial, Existencias, Prestado, Imagen, PDF, Download, Descripcion", "'$bookCode','$bookCodeManual','$bookCategory','$bookProvider','$bookInstitution','$bookAutor','$bookCountry','$bookYear','$bookEstimated','$bookName','$bookEdition','$bookLocation','$bookOffice','$bookEditorial','$bookCopies','$bookBorrowed','$finalPictureName','$finalPDFName','$bookDownload','$bookDescription'")){
+              if(consultasSQL::InsertSQL("libro", "CodigoLibro, CodigoLibroManual, CodigoCategoria, CodigoProveedor, CodigoInfraestructura, Autor, Pais, Year, Estimado, idioma, hombres, mujeres, discapacidad, genero, Titulo, Edicion, Ubicacion, Cargo, Editorial, Existencias, Prestado, Imagen, PDF, Download, Descripcion", "'$bookCode','$bookCodeManual','$bookCategory','$bookProvider','$bookInstitution','$bookAutor','$bookCountry','$bookYear','$bookEstimated','$bookIdioma','$bookHombres','$bookMujeres','$bookDiscapacidad','$bookGenero','$bookName','$bookEdition','$bookLocation','$bookOffice','$bookEditorial','$bookCopies','$bookBorrowed','$finalPictureName','$finalPDFName','$bookDownload','$bookDescription'")){
                 echo '<script type="text/javascript">
                     swal({
                        title:"Empresa registrada!",
