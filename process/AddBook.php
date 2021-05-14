@@ -25,6 +25,50 @@ $bookMujeres=consultasSQL::CleanStringText($_POST['bookMujeres']);
 $bookDiscapacidad=consultasSQL::CleanStringText($_POST['bookDiscapacidad']);
 $bookGenero=consultasSQL::CleanStringText($_POST['bookGenero']);
 
+$bookReservas=consultasSQL::CleanStringText($_POST['bookReservas']);
+$bookSimples=consultasSQL::CleanStringText($_POST['bookSimples']);
+$bookDobles=consultasSQL::CleanStringText($_POST['bookDobles']);
+$bookTriples=consultasSQL::CleanStringText($_POST['bookTriples']);
+$bookMatrimonio=consultasSQL::CleanStringText($_POST['bookMatrimonio']);
+$bookFamilia=consultasSQL::CleanStringText($_POST['bookFamilia']);
+$bookCamas=consultasSQL::CleanStringText($_POST['bookCamas']);
+$bookPlazas=consultasSQL::CleanStringText($_POST['bookPlazas']);
+$bookMesas=consultasSQL::CleanStringText($_POST['bookMesas']);
+$bookBanosHombres=consultasSQL::CleanStringText($_POST['bookBanosHombres']);
+$bookBanosMujeres=consultasSQL::CleanStringText($_POST['bookBanosMujeres']);
+$bookEscape=consultasSQL::CleanStringText($_POST['bookEscape']);
+$bookPagos=consultasSQL::CleanStringText($_POST['bookPagos']);
+$bookParqueaderos=consultasSQL::CleanStringText($_POST['bookParqueaderos']);
+$bookSeguridad=consultasSQL::CleanStringText($_POST['bookSeguridad']);
+$bookMascotas=consultasSQL::CleanStringText($_POST['bookMascotas']);
+$bookLimpieza=consultasSQL::CleanStringText($_POST['bookLimpieza']);
+$bookFolleteria=consultasSQL::CleanStringText($_POST['bookFolleteria']);
+$bookPromocion=consultasSQL::CleanStringText($_POST['bookPromocion']);
+$bookCapacitacion=consultasSQL::CleanStringText($_POST['bookCapacitacion']);
+$bookCapacidad=consultasSQL::CleanStringText($_POST['bookCapacidad']);
+$bookSenaletica=consultasSQL::CleanStringText($_POST['bookSenaletica']);
+$bookWifi=consultasSQL::CleanStringText($_POST['bookWifi']);
+$bookOperadores=consultasSQL::CleanStringText($_POST['bookOperadores']);
+$bookTurnos=consultasSQL::CleanStringText($_POST['bookTurnos']);
+$bookBicicletas=consultasSQL::CleanStringText($_POST['bookBicicletas']);
+$bookMaleteros=consultasSQL::CleanStringText($_POST['bookMaleteros']);
+$bookChalecos=consultasSQL::CleanStringText($_POST['bookChalecos']);
+$bookCompania=consultasSQL::CleanStringText($_POST['bookCompania']);
+$bookLicencias=consultasSQL::CleanStringText($_POST['bookLicencias']);
+$bookBoton=consultasSQL::CleanStringText($_POST['bookBoton']);
+$bookCinturones=consultasSQL::CleanStringText($_POST['bookCinturones']);
+$bookVehiculos=consultasSQL::CleanStringText($_POST['bookVehiculos']);
+$bookPasajeros=consultasSQL::CleanStringText($_POST['bookPasajeros']);
+$bookSocios=consultasSQL::CleanStringText($_POST['bookSocios']);
+$bookChoferes=consultasSQL::CleanStringText($_POST['bookChoferes']);
+$bookAsientos=consultasSQL::CleanStringText($_POST['bookAsientos']);
+$bookTV=consultasSQL::CleanStringText($_POST['bookTV']);
+$bookAC=consultasSQL::CleanStringText($_POST['bookAC']);
+$bookMicrofono=consultasSQL::CleanStringText($_POST['bookMicrofono']);
+$bookEstado=consultasSQL::CleanStringText($_POST['bookEstado']);
+$bookSector=consultasSQL::CleanStringText($_POST['bookSector']);
+$bookReferencia=consultasSQL::CleanStringText($_POST['bookReferencia']);
+
 
 
 
@@ -64,7 +108,7 @@ if(mysqli_num_rows($bookCheckInstitution)>0){
       if(($bookPictureType=="image/jpeg"||$bookPictureType=="image/png"||$bookPictureType=="")&&($bookPDFType=="application/pdf"||$bookPDFType=="")){
         if(($bookPictureSize/1024)<=$bookPictureMaxSize && ($bookPDFSize/1024)<=$bookPDFMaxSize){
           if($bookPictureType=="" && $bookPDFType==""){
-           if(consultasSQL::InsertSQL("libro", "CodigoLibro, CodigoLibroManual, CodigoCategoria, CodigoProveedor, CodigoInfraestructura, Autor, Pais, Year, Estimado, idioma, hombres, mujeres, discapacidad, genero, Titulo, Edicion, Ubicacion, Cargo, Editorial, Existencias, Prestado, Descripcion", "'$bookCode','$bookCodeManual','$bookCategory','$bookProvider','$bookInstitution','$bookAutor','$bookCountry','$bookYear','$bookEstimated','$bookIdioma','$bookHombres','$bookMujeres','$bookDiscapacidad','$bookGenero','$bookName','$bookEdition','$bookLocation','$bookOffice','$bookEditorial','$bookCopies','$bookBorrowed','$bookDescription'")){
+           if(consultasSQL::InsertSQL("libro", "CodigoLibro, CodigoLibroManual, CodigoCategoria, CodigoProveedor, CodigoInfraestructura, Autor, Pais, Year, Estimado, idioma, hombres, mujeres, discapacidad, genero, reservas, simples, dobles, triples, matrimonio, familia, camas, plazas, mesas, banoshombres, banosmujeres, escape, pagos, parqueaderos, seguridad, mascotas, limpieza, folleteria, promocion, capacitacion, capacidad, senaletica, wifi, operadores, turnos, bicicletas, maleteros, chalecos, compania, licencias, boton, cinturones, vehiculos, pasajeros, socios, choferes, asientos, tv, ac, microfono, estado, sector, referencia, Titulo, Edicion, Ubicacion, Cargo, Editorial, Existencias, Prestado, Descripcion", "'$bookCode','$bookCodeManual','$bookCategory','$bookProvider','$bookInstitution','$bookAutor','$bookCountry','$bookYear','$bookEstimated','$bookIdioma','$bookHombres','$bookMujeres','$bookDiscapacidad','$bookGenero','$bookReservas','$bookSimples','$bookDobles','$bookTriples','$bookMatrimonio','$bookFamilia','$bookCamas','$bookPlazas','$bookMesas','$bookBanosHombres','$bookBanosMujeres','$bookEscape','$bookPagos','$bookParqueaderos','$bookSeguridad','$bookMascotas','$bookLimpieza','$bookFolleteria','$bookPromocion','$bookCapacitacion','$bookCapacidad','$bookSenaletica','$bookWifi','$bookOperadores','$bookTurnos','$bookBicicletas','$bookMaleteros','$bookChalecos','$bookCompania','$bookLicencias','$bookBoton','$bookCinturones','$bookVehiculos','$bookPasajeros','$bookSocios','$bookChoferes','$bookAsientos','$bookTV','$bookAC','$bookMicrofono','$bookEstado','$bookSector','$bookReferencia','$bookName','$bookEdition','$bookLocation','$bookOffice','$bookEditorial','$bookCopies','$bookBorrowed','$bookDescription'")){
                echo '<script type="text/javascript">
                     swal({
                        title:"Empresa registrada!",
@@ -143,7 +187,7 @@ if(mysqli_num_rows($bookCheckInstitution)>0){
               $moveFile=FALSE;
             }
             if($moveFile){
-              if(consultasSQL::InsertSQL("libro", "CodigoLibro, CodigoLibroManual, CodigoCategoria, CodigoProveedor, CodigoInfraestructura, Autor, Pais, Year, Estimado, idioma, hombres, mujeres, discapacidad, genero, Titulo, Edicion, Ubicacion, Cargo, Editorial, Existencias, Prestado, Imagen, PDF, Download, Descripcion", "'$bookCode','$bookCodeManual','$bookCategory','$bookProvider','$bookInstitution','$bookAutor','$bookCountry','$bookYear','$bookEstimated','$bookIdioma','$bookHombres','$bookMujeres','$bookDiscapacidad','$bookGenero','$bookName','$bookEdition','$bookLocation','$bookOffice','$bookEditorial','$bookCopies','$bookBorrowed','$finalPictureName','$finalPDFName','$bookDownload','$bookDescription'")){
+              if(consultasSQL::InsertSQL("libro", "CodigoLibro, CodigoLibroManual, CodigoCategoria, CodigoProveedor, CodigoInfraestructura, Autor, Pais, Year, Estimado, idioma, hombres, mujeres, discapacidad, genero, reservas, simples, dobles, triples, matrimonio, familia, camas, plazas, mesas, banoshombres, banosmujeres, escape, pagos, parqueaderos, seguridad, mascotas, limpieza, folleteria, promocion, capacitacion, capacidad, senaletica, wifi, operadores, turnos, bicicletas, maleteros, chalecos, compania, licencias, boton, cinturones, vehiculos, pasajeros, socios, choferes, asientos, tv, ac, microfono, estado, sector, referencia,Titulo, Edicion, Ubicacion, Cargo, Editorial, Existencias, Prestado, Imagen, PDF, Download, Descripcion", "'$bookCode','$bookCodeManual','$bookCategory','$bookProvider','$bookInstitution','$bookAutor','$bookCountry','$bookYear','$bookEstimated','$bookIdioma','$bookHombres','$bookMujeres','$bookDiscapacidad','$bookGenero','$bookReservas','$bookSimples','$bookDobles','$bookTriples','$bookMatrimonio','$bookFamilia','$bookCamas','$bookPlazas','$bookMesas','$bookBanosHombres','$bookBanosMujeres','$bookEscape','$bookPagos','$bookParqueaderos','$bookSeguridad','$bookMascotas','$bookLimpieza','$bookFolleteria','$bookPromocion','$bookCapacitacion','$bookCapacidad','$bookSenaletica','$bookWifi','$bookOperadores','$bookTurnos','$bookBicicletas','$bookMaleteros','$bookChalecos','$bookCompania','$bookLicencias','$bookBoton','$bookCinturones','$bookVehiculos','$bookPasajeros','$bookSocios','$bookChoferes','$bookAsientos','$bookTV','$bookAC','$bookMicrofono','$bookEstado','$bookSector','$bookReferencia','$bookName','$bookEdition','$bookLocation','$bookOffice','$bookEditorial','$bookCopies','$bookBorrowed','$finalPictureName','$finalPDFName','$bookDownload','$bookDescription'")){
                 echo '<script type="text/javascript">
                     swal({
                        title:"Empresa registrada!",

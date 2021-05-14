@@ -124,7 +124,7 @@
                                 <input type="hidden" value="1" class="material-control tooltips-general"  placeholder="Escribe aquí la referencia de la ubicación" name="bookCopies"  maxlength="90" data-toggle="tooltip" data-placement="top" title="Escribe una referencia clara de la ubicación" >
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Referencia</label>
+                                <label>Copias</label>
                             </div>
                             <!--<legend><strong>Ubicación, valor y resumen</strong></legend><br>-->
 
