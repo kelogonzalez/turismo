@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Información de libro</title>
+    <title>Información de la empresa</title>
     <?php
         session_start();
         $LinksRoute="./";
-        include './inc/links.php'; 
+        include './inc/links.php';
     ?>
     <link rel="stylesheet" href="css/jquery.datetimepicker.css">
     <script src="js/SendForm.js"></script>
     <script src="js/jquery.datetimepicker.js"></script>
 </head>
 <body>
-    <?php  
+    <?php
         include './library/configServer.php';
         include './library/consulSQL.php';
         include './process/SecurityUser.php';
         include './inc/NavLateral.php';
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
-        <?php 
+        <?php
             include './inc/NavUserInfo.php';
         ?>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Información de libro</small></h1>
+              <h1 class="all-tittles">Sistema Turístico <small>Información de la empresa</small></h1>
             </div>
         </div>
         <?php
@@ -53,12 +53,15 @@
                         }
                     ?>
                 </div>
+
+
+                <!--
                 <div class="col-xs-12" style="padding: 40px 0">
                     <?php
                         $total=$fila['Existencias']-$fila['Prestado'];
                         if($total>0){
                             if($_SESSION['UserPrivilege']=='Admin'){
-                               include './inc/FormLoanAdmin.php'; 
+                               include './inc/FormLoanAdmin.php';
                             }
                             if($_SESSION['UserPrivilege']=='Student' || $_SESSION['UserPrivilege']=='Teacher'||$_SESSION['UserPrivilege']=='Personal'){
                                include './inc/FormLoanUsers.php';
@@ -70,6 +73,10 @@
                         $year=mysqli_fetch_array($checkYear, MYSQLI_ASSOC);
                     ?>
                 </div>
+-->
+
+
+
             </div>
         </div>
         <div class="msjFormSend"></div>
@@ -78,7 +85,7 @@
             <form class="modal-content" action="process/UpdateBook.php" method="POST" id="saveData" autocomplete="off" enctype="multipart/form-data">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title text-center all-tittles">Actualizar libro</h4>
+                <h4 class="modal-title text-center all-tittles">Actualizar Empresa</h4>
               </div>
               <div class="modal-body" id="ModalData"></div>
               <div class="modal-footer">
@@ -96,7 +103,7 @@
                     <h4 class="modal-title text-center all-tittles">ayuda del sistema</h4>
                 </div>
                 <div class="modal-body">
-                    <?php 
+                    <?php
                         if($_SESSION['UserPrivilege']=='Student'||$_SESSION['UserPrivilege']=='Teacher'||$_SESSION['UserPrivilege']=='Personal'){
                             include './help/help-infobook-users.php';
                         }else{
@@ -164,7 +171,7 @@
             });
         });
     </script>
-    <?php 
+    <?php
         mysqli_free_result($checkYear);
     ?>
 </body>

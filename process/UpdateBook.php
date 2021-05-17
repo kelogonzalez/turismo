@@ -17,6 +17,29 @@ $bookLocation=consultasSQL::CleanStringText($_POST['bookLocation']);
 $bookOffice=consultasSQL::CleanStringText($_POST['bookOffice']);
 $bookEstimated=consultasSQL::CleanStringText($_POST['bookEstimated']);
 
+
+$bookReferencia=consultasSQL::CleanStringText($_POST['bookReferencia']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $OLDbookPicture=consultasSQL::CleanStringText($_POST['OLDbookPicture']);
 $OLDbookPDF=consultasSQL::CleanStringText($_POST['OLDbookPDF']);
 $bookPictureTMP=consultasSQL::CleanStringText($_FILES['bookPicture']['tmp_name']);
@@ -39,7 +62,7 @@ $checkLoanBook1=ejecutarSQL::consultar("SELECT * FROM prestamo WHERE CodigoLibro
 if(mysqli_num_rows($checkLoanBook)<=0 && mysqli_num_rows($checkLoanBook1)<=0){
     if(($bookPictureType=="image/jpeg"||$bookPictureType=="image/png"||$bookPictureType=="")&&($bookPDFType=="application/pdf"||$bookPDFType=="")){
         if(($bookPictureSize/1024)<=$bookPictureMaxSize && ($bookPDFSize/1024)<=$bookPDFMaxSize){
-            $bookDataSave="CodigoCategoria='$bookCategory',CodigoLibroManual='$bookCodeManual',Titulo='$bookName',Autor='$bookAutor',Pais='$bookCountry',CodigoProveedor='$bookProvider',Year='$bookYear',Editorial='$bookEditorial',Edicion='$bookEdition',Existencias='$bookCopies',Ubicacion='$bookLocation',Cargo='$bookOffice',Estimado='$bookEstimated',Download='$bookDownload',Descripcion='$bookDescription'";
+            $bookDataSave="CodigoCategoria='$bookCategory',CodigoLibroManual='$bookCodeManual',Titulo='$bookName',Autor='$bookAutor',Pais='$bookCountry',CodigoProveedor='$bookProvider',Year='$bookYear',Editorial='$bookEditorial',Edicion='$bookEdition',referencia='$bookReferencia',Existencias='$bookCopies',Ubicacion='$bookLocation',Cargo='$bookOffice',Estimado='$bookEstimated',Download='$bookDownload',Descripcion='$bookDescription'";
             if($bookPictureType=="" && $bookPDFType==""){
                 $moveFile=TRUE;
             }else{
@@ -58,27 +81,27 @@ if(mysqli_num_rows($checkLoanBook)<=0 && mysqli_num_rows($checkLoanBook1)<=0){
             if($moveFile){
                 if(consultasSQL::UpdateSQL("libro", $bookDataSave, "CodigoLibro='$bookCode'")){
                     echo '<script type="text/javascript">
-                        swal({ 
-                            title:"¡Datos del libro actualizados!", 
-                            text:"Los datos del libro se actualizaron correctamente", 
-                            type: "success", 
-                            confirmButtonText: "Aceptar" 
+                        swal({
+                            title:"¡Datos de la empresa actualizados!",
+                            text:"Los datos de la empresa se actualizaron correctamente",
+                            type: "success",
+                            confirmButtonText: "Aceptar"
                         },
-                        function(isConfirm){  
-                            if (isConfirm) {     
+                        function(isConfirm){
+                            if (isConfirm) {
                                window.location="infobook.php?codeBook='.$bookCode.'";
-                            } else {    
+                            } else {
                                 window.location="infobook.php?codeBook='.$bookCode.'";;
-                            } 
+                            }
                         });
                     </script>';
                 }else{
                     echo '<script type="text/javascript">
-                        swal({ 
-                            title:"¡Ocurrió un error inesperado!", 
-                            text:"No hemos podido actualizar los datos del libro, por favor intenta nuevamente", 
-                            type: "error", 
-                            confirmButtonText: "Aceptar" 
+                        swal({
+                            title:"¡Ocurrió un error inesperado!",
+                            text:"No hemos podido actualizar los datos del libro, por favor intenta nuevamente",
+                            type: "error",
+                            confirmButtonText: "Aceptar"
                         });
                     </script>';
                 }
@@ -90,7 +113,7 @@ if(mysqli_num_rows($checkLoanBook)<=0 && mysqli_num_rows($checkLoanBook1)<=0){
                      type: "error",
                      confirmButtonText: "Aceptar"
                   });
-              </script>';  
+              </script>';
             }
         }else{
             echo '<script type="text/javascript">
@@ -114,11 +137,11 @@ if(mysqli_num_rows($checkLoanBook)<=0 && mysqli_num_rows($checkLoanBook1)<=0){
     }
 }else{
     echo '<script type="text/javascript">
-        swal({ 
-            title:"¡Ocurrió un error inesperado!", 
-            text:"Este libro tiene préstamos o reservaciones vigentes, no puedes actualizar los datos", 
-            type: "error", 
-            confirmButtonText: "Aceptar" 
+        swal({
+            title:"¡Ocurrió un error inesperado!",
+            text:"Esta empresa tiene préstamos o reservaciones vigentes, no puedes actualizar los datos",
+            type: "error",
+            confirmButtonText: "Aceptar"
         });
     </script>';
 }
