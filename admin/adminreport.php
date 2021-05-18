@@ -149,7 +149,7 @@
                                     <p class="text-center">
                                         <i class="zmdi zmdi-trending-up zmdi-hc-5x btn-file" data-file="../report/ReportBookCategories.php" data-type="report"></i>
                                     </p>
-                                    <h3 class="text-center">Reporte Empresas por Categoría</h3>
+                                    <h3 class="text-center">Reporte Empresas por Actividades</h3>
                                 </div>
                             </div>
 
