@@ -194,7 +194,7 @@
           .setHTML(
             '<h3 class="text-center">'+currentFeature.properties.storeName+'</h3>' +
               '<h4>' +
-              currentFeature.properties.address +'<br><b>Teléfono: </b>'+currentFeature.properties.phoneFormatted+
+              currentFeature.properties.address +'<br><b>Teléfono: </b>'+currentFeature.properties.phoneFormatted+'<br><b>E-mail: </b>'+currentFeature.properties.city+
               '</h4>'
           )
           .addTo(map);
