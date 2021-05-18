@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Departamento</title>
+    <title>Tipo de Turismo</title>
     <?php
         session_start();
         $LinksRoute="../";
@@ -18,7 +18,7 @@
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
         <?php
-            include '../inc/NavUserInfo.php';
+            include '../inc/NavUserInfo.php'; 
         ?>
         <div class="container">
             <div class="page-header">
@@ -28,9 +28,9 @@
         <div class="container-fluid">
             <ul class="nav nav-tabs nav-justified"  style="font-size: 17px;">
               <li role="presentation"><a href="admininstitution.php">Institución</a></li>
-              <li role="presentation"  class="active"><a href="adminprovider.php">Departamentos</a></li>
+              <li role="presentation"  class="active"><a href="adminprovider.php">Tipo de Turismo</a></li>
               <li role="presentation"><a href="admincategory.php">Actividad</a></li>
-              <li role="presentation"><a href="adminsection.php">Tipo de Turismo</a></li>
+              <!--<li role="presentation"><a href="adminsection.php">Tipo de Turismo</a></li>-->
             </ul>
         </div>
         <div class="container-fluid"  style="margin: 50px 0;">
@@ -39,7 +39,7 @@
                     <img src="../assets/img/user04.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                    Bienvenido a la sección donde se encuentra el listado de departamentos. Puedes actualizar o eliminar los datos del departamento.
+                    Bienvenido a la sección donde se encuentra el listado de Tipo de Turismo. Puedes actualizar o eliminar los datos del departamento.
                 </div>
             </div>
         </div>
@@ -47,22 +47,22 @@
             <div class="row">
                 <div class="col-xs-12 lead">
                     <ol class="breadcrumb">
-                      <li><a href="adminprovider.php">Nuevo departamento</a></li>
-                      <li class="active">Listado de departamentos</li>
+                      <li><a href="adminprovider.php">Nuevo Tipo de Turismo</a></li>
+                      <li class="active">Listado de Tipos de Turismo</li>
                     </ol>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
-            <h2 class="text-center all-tittles">listado de departamentos</h2>
+            <h2 class="text-center all-tittles">listado de Tipo de Turismo</h2>
             <div class="div-table">
                 <div class="div-table-row div-table-head">
                     <div class="div-table-cell">#</div>
-                    <div class="div-table-cell">Nombre</div>
-                    <div class="div-table-cell">Email</div>
-                    <div class="div-table-cell">Dirección</div>
-                    <div class="div-table-cell">Teléfono</div>
-                    <div class="div-table-cell">Responsable</div>
+                    <div class="div-table-cell">Clasificación MINTUR</div>
+                    <!--<div class="div-table-cell">Email</div>-->
+                    <div class="div-table-cell">Categoria</div>
+                    <!--<div class="div-table-cell">Teléfono</div>
+                    <div class="div-table-cell">Responsable</div>-->
                     <div class="div-table-cell">Actualizar</div>
                     <div class="div-table-cell">Eliminar</div>
                 </div>
@@ -74,10 +74,10 @@
                         echo '<div class="div-table-row">
                             <div class="div-table-cell">'.$p.'</div>
                             <div class="div-table-cell">'.$fila['Nombre'].'</div>
-                            <div class="div-table-cell">'.$fila['Email'].'</div>
+
                             <div class="div-table-cell">'.$fila['Direccion'].'</div>
-                            <div class="div-table-cell">'.$fila['Telefono'].'</div>
-                            <div class="div-table-cell">'.$fila['ResponAtencion'].'</div>
+
+
                             <div class="div-table-cell"><button class="btn btn-success btn-update" data-code="'.$fila['CodigoProveedor'].'" data-url="../process/SelectDataProvider.php"><i class="zmdi zmdi-refresh"></i></button></div>';
                             $checkBookProvider=ejecutarSQL::consultar("SELECT * FROM libro WHERE CodigoProveedor='".$fila['CodigoProveedor']."'");
                             if(mysqli_num_rows($checkBookProvider)>=1){
@@ -102,7 +102,7 @@
             <form class="form_SRCB modal-content" action="../process/UpdateProvider.php" method="post" data-type-form="update" autocomplete="off">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title text-center all-tittles">Actualizar datos de proveedor</h4>
+                <h4 class="modal-title text-center all-tittles">Actualizar datos de Tipo Turismo</h4>
               </div>
               <div class="modal-body" id="ModalData"></div>
               <div class="modal-footer">

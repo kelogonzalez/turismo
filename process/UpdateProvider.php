@@ -10,28 +10,28 @@ $providerPhone=consultasSQL::CleanStringText($_POST['providerPhone']);
 $providerResponse=consultasSQL::CleanStringText($_POST['providerResponsible']);
 if(consultasSQL::UpdateSQL("proveedor", "Nombre='$providerName',Email='$providerEmail',Direccion='$providerAddress',Telefono='$providerPhone',ResponAtencion='$providerResponse'", "CodigoProveedor='$providerCode'")){
     echo '<script type="text/javascript">
-        swal({ 
-            title:"¡Proveedor actualizado!", 
-            text:"Los datos del proveedor se actualizaron correctamente", 
-            type: "success", 
-            confirmButtonText: "Aceptar" 
+        swal({
+            title:"¡Tipo de Turismo actualizado!",
+            text:"Los datos se actualizaron correctamente",
+            type: "success",
+            confirmButtonText: "Aceptar"
         },
-        function(isConfirm){  
-            if (isConfirm) {     
+        function(isConfirm){
+            if (isConfirm) {
                 location.reload();
-            } else {    
+            } else {
                 location.reload();
-            } 
+            }
         });
-    </script>'; 
+    </script>';
 }
 else{
     echo '<script type="text/javascript">
-        swal({ 
-            title:"¡Ocurrió un error inesperado!", 
-            text:"No se pudo actualizar los datos del proveedor, por favor intenta nuevamente", 
-            type: "error", 
-            confirmButtonText: "Aceptar" 
+        swal({
+            title:"¡Ocurrió un error inesperado!",
+            text:"No se pudo actualizar los datos del tipo de turismo, por favor intenta nuevamente",
+            type: "error",
+            confirmButtonText: "Aceptar"
         });
     </script>';
 }

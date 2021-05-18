@@ -41,24 +41,24 @@
                         </li>
 
 
-<!--
+
                         <li>
                             <a href="<?php echo $LinkRouteAdmin; ?>adminprovider.php">
-                                <i class="zmdi zmdi-truck zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo proveedor
+                                <i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo Tipo de Turismo
                             </a>
                         </li>
--->
+
 
                         <li>
                             <a href="<?php echo $LinkRouteAdmin; ?>admincategory.php">
                                 <i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Nueva actividad
                             </a>
                         </li>
-                        <li>
+                        <!--<li>
                             <a href="<?php echo $LinkRouteAdmin; ?>adminsection.php">
                                 <i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo tipo de turismo
                             </a>
-                        </li>
+                        </li>-->
                     </ul>
                 </li>
                 <li>

@@ -13,7 +13,7 @@
     <?php
         include '../library/configServer.php';
         include '../library/consulSQL.php';
-        include '../process/SecurityAdmin.php';
+        //include '../process/SecurityAdmin.php';
         include '../inc/NavLateral.php';
     ?>
     <div class="content-page-container full-reset custom-scroll-containers">
