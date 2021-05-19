@@ -19,6 +19,7 @@ $bookEstimated=consultasSQL::CleanStringText($_POST['bookEstimated']);
 
 
 $bookReferencia=consultasSQL::CleanStringText($_POST['bookReferencia']);
+$bookIdioma=consultasSQL::CleanStringText($_POST['bookIdioma']);
 
 
 
@@ -62,7 +63,7 @@ $checkLoanBook1=ejecutarSQL::consultar("SELECT * FROM prestamo WHERE CodigoLibro
 if(mysqli_num_rows($checkLoanBook)<=0 && mysqli_num_rows($checkLoanBook1)<=0){
     if(($bookPictureType=="image/jpeg"||$bookPictureType=="image/png"||$bookPictureType=="")&&($bookPDFType=="application/pdf"||$bookPDFType=="")){
         if(($bookPictureSize/1024)<=$bookPictureMaxSize && ($bookPDFSize/1024)<=$bookPDFMaxSize){
-            $bookDataSave="CodigoCategoria='$bookCategory',CodigoLibroManual='$bookCodeManual',Titulo='$bookName',Autor='$bookAutor',Pais='$bookCountry',CodigoProveedor='$bookProvider',Year='$bookYear',Editorial='$bookEditorial',Edicion='$bookEdition',referencia='$bookReferencia',Existencias='$bookCopies',Ubicacion='$bookLocation',Cargo='$bookOffice',Estimado='$bookEstimated',Download='$bookDownload',Descripcion='$bookDescription'";
+            $bookDataSave="CodigoCategoria='$bookCategory',CodigoLibroManual='$bookCodeManual',Titulo='$bookName',Autor='$bookAutor',Pais='$bookCountry',CodigoProveedor='$bookProvider',Year='$bookYear',Editorial='$bookEditorial',Edicion='$bookEdition',Idioma='$bookIdioma',referencia='$bookReferencia',Existencias='$bookCopies',Ubicacion='$bookLocation',Cargo='$bookOffice',Estimado='$bookEstimated',Download='$bookDownload',Descripcion='$bookDescription'";
             if($bookPictureType=="" && $bookPDFType==""){
                 $moveFile=TRUE;
             }else{

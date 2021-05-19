@@ -101,6 +101,16 @@ if(mysqli_num_rows($SdataB)>=1){
         <span class="bar"></span>
         <label>Teléfono</label>
     </div>
+
+    <div class="group-material">
+        <input type="text" value="'.$dBook['idioma'].'" class="material-control tooltips-general" name="bookIdioma" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Idioma">
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Idioma que hablan</label>
+    </div>
+
+
+
     <div class="group-material">
         <span>Resumen del libro</span>
         <textarea class="material-control" name="bookDescription" rows="7" placeholder="Escribe aquí el resumen del libro">'.$dBook['Descripcion'].'</textarea>

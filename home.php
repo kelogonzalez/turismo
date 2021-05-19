@@ -85,13 +85,15 @@
                 <div class="tile-name all-tittles">actividad</div>
                 <div class="tile-num full-reset"><?php echo mysqli_num_rows($checkCategories); ?></div>
             </article>
+
+            <!--
             <article class="tile" data-href="./admin/adminlistsection.php" data-num="<?php echo mysqli_num_rows($checkSections); ?>">
                 <div class="tile-icon full-reset"><i class="zmdi zmdi-assignment-account"></i></div>
                 <div class="tile-name all-tittles">tipo de turismo</div>
                 <div class="tile-num full-reset"><?php echo mysqli_num_rows($checkSections); ?></div>
             </article>
 
-<!--
+
             <article class="tile" data-href="./admin/adminreservation.php" data-num="<?php echo mysqli_num_rows($checkReservation); ?>">
                 <div class="tile-icon full-reset"><i class="zmdi zmdi-timer"></i></div>
                 <div class="tile-name all-tittles">reservaciones</div>
