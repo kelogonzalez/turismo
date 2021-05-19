@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/login.css"/>
     <script src="js/SendForm.js"></script>
 </head>
-<body class="full-cover-background" style="background-image:url(assets/img/font-login.JPG);">
+<body class="full-cover-background" style="background-image:url(assets/img/font-login.jpg);">
     <div class="form-container">
       <figure>
           <img src="<?php echo $LinksRoute; ?>assets/img/iturp.png" alt="Biblioteca" class="img-responsive center-box" style="width:100%;">
