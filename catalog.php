@@ -184,7 +184,7 @@
 	            </nav>
                 <?php
                     }else{
-                        echo '<br><br><br><p class="lead text-center all-tittles">No hay libros registrados en esta categoría</p><br><br><br><br><br><br>';
+                        echo '<br><br><br><p class="lead text-center all-tittles">No hay Empresas registradas en esta categoría</p><br><br><br><br><br><br>';
                     }
                     mysqli_free_result($checkCodeBook);
                 }
