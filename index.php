@@ -34,11 +34,11 @@
             </div>
             <div class="group-material">
                 <select class="material-control-login" name="UserType">
-                    <option value="" disabled="" selected="">Tipo de usuario</option>
-                    <!--<option value="Student">Usuario</option>-->
+                    <!--<option value="" disabled="" selected="">Tipo de usuario</option>
+                    <option value="Student">Usuario</option>
                     <option value="Teacher">Personal de Turismo</option>
-                  <!--  <option value="Personal">Personal administrativo</option>-->
-                    <option value="Admin">Administrador</option>
+                  <option value="Personal">Personal administrativo</option>-->
+                    <option value="Admin" selected="">Administrador</option>
                 </select>
             </div>
             <button class="btn-login" type="submit">Ingresar al sistema &nbsp; <i class="zmdi zmdi-arrow-right"></i></button>
