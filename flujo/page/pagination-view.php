@@ -29,8 +29,8 @@
 					<th>Adultos</th>
 					<th>Niños</th>
 					<th>Adultos Mayores</th>
-					<th>Total de personas</th>
 					<th>Lugar de procedencia</th>
+					<th>Total de personas</th>
 				</tr>
 			</thead>
 			<tbody>

@@ -44,6 +44,63 @@
             <tr><td><strong>Sitio Web</strong></td><td><?php echo $fila['Cargo']; ?></td></tr>
             <tr><td><strong>Teléfono</strong></td><td><?php echo $fila['Estimado']; ?></td></tr>
             <tr><td><strong>Idioma que hablan</strong></td><td><?php echo $fila['idioma']; ?></td></tr>
+
+            <tr>
+                <th colspan="2" class="text-center lead success"><strong>Personal que labora</strong></th>
+            </tr>
+            <tr><td><strong>Hombres</strong></td><td><?php echo $fila['hombres']; ?></td></tr>
+            <tr><td><strong>Mujeres</strong></td><td><?php echo $fila['mujeres']; ?></td></tr>
+            <tr><td><strong>Con Discapacidad</strong></td><td><?php echo $fila['discapacidad']; ?></td></tr>
+            <tr><td><strong>E. Genero</strong></td><td><?php echo $fila['genero']; ?></td></tr>
+
+            <tr>
+                <th colspan="2" class="text-center lead success"><strong>Especificaciones</strong></th>
+            </tr>
+            <tr><td><strong>Reservas</strong></td><td><?php echo $fila['reservas']; ?></td></tr>
+            <tr><td><strong>Habitaciones Simples</strong></td><td><?php echo $fila['simples']; ?></td></tr>
+            <tr><td><strong>Habitaciones Dobles</strong></td><td><?php echo $fila['dobles']; ?></td></tr>
+            <tr><td><strong>Habitaciones Triples</strong></td><td><?php echo $fila['triples']; ?></td></tr>
+            <tr><td><strong>Habitaciones Matrimoniales</strong></td><td><?php echo $fila['matrimonio']; ?></td></tr>
+            <tr><td><strong>Habitaciones Familiares</strong></td><td><?php echo $fila['familia']; ?></td></tr>
+            <tr><td><strong>Camas</strong></td><td><?php echo $fila['camas']; ?></td></tr>
+            <tr><td><strong>Plazas</strong></td><td><?php echo $fila['plazas']; ?></td></tr>
+            <tr><td><strong>Mesas</strong></td><td><?php echo $fila['mesas']; ?></td></tr>
+            <tr><td><strong>Baños de hombres</strong></td><td><?php echo $fila['banoshombres']; ?></td></tr>
+            <tr><td><strong>Baños de mujeres</strong></td><td><?php echo $fila['banosmujeres']; ?></td></tr>
+            <tr><td><strong>Salidas de escape</strong></td><td><?php echo $fila['escape']; ?></td></tr>
+            <tr><td><strong>Tipos de pago</strong></td><td><?php echo $fila['pagos']; ?></td></tr>
+            <tr><td><strong>Parqueadero</strong></td><td><?php echo $fila['parqueaderos']; ?></td></tr>
+            <tr><td><strong>Seguridad</strong></td><td><?php echo $fila['seguridad']; ?></td></tr>
+            <tr><td><strong>Mascotas</strong></td><td><?php echo $fila['mascotas']; ?></td></tr>
+            <tr><td><strong>Limpieza</strong></td><td><?php echo $fila['limpieza']; ?></td></tr>
+            <tr><td><strong>Folleteria</strong></td><td><?php echo $fila['folleteria']; ?></td></tr>
+            <tr><td><strong>Promoción</strong></td><td><?php echo $fila['promocion']; ?></td></tr>
+            <tr><td><strong>Capacitación</strong></td><td><?php echo $fila['capacitacion']; ?></td></tr>
+            <tr><td><strong>Capacidad</strong></td><td><?php echo $fila['capacidad']; ?></td></tr>
+            <tr><td><strong>Señaletica</strong></td><td><?php echo $fila['senaletica']; ?></td></tr>
+            <tr><td><strong>Wifi</strong></td><td><?php echo $fila['wifi']; ?></td></tr>
+            <tr><td><strong>Operadores</strong></td><td><?php echo $fila['operadores']; ?></td></tr>
+            <tr><td><strong>Turnos</strong></td><td><?php echo $fila['turnos']; ?></td></tr>
+            <tr><td><strong>PortaBicicletas</strong></td><td><?php echo $fila['bicicletas']; ?></td></tr>
+            <tr><td><strong>Maleteros</strong></td><td><?php echo $fila['maleteros']; ?></td></tr>
+            <tr><td><strong>Chalecos</strong></td><td><?php echo $fila['chalecos']; ?></td></tr>
+            <tr><td><strong>Compañia</strong></td><td><?php echo $fila['compania']; ?></td></tr>
+            <tr><td><strong>Licencias</strong></td><td><?php echo $fila['licencias']; ?></td></tr>
+            <tr><td><strong>Boton de ayuda</strong></td><td><?php echo $fila['boton']; ?></td></tr>
+            <tr><td><strong>Cinturones de Seguridad</strong></td><td><?php echo $fila['cinturones']; ?></td></tr>
+            <tr><td><strong>Vehiculos</strong></td><td><?php echo $fila['vehiculos']; ?></td></tr>
+            <tr><td><strong>Pasajeros</strong></td><td><?php echo $fila['pasajeros']; ?></td></tr>
+            <tr><td><strong>Socios</strong></td><td><?php echo $fila['socios']; ?></td></tr>
+            <tr><td><strong>Choferes</strong></td><td><?php echo $fila['choferes']; ?></td></tr>
+            <tr><td><strong>Asientos</strong></td><td><?php echo $fila['asientos']; ?></td></tr>
+            <tr><td><strong>TV</strong></td><td><?php echo $fila['tv']; ?></td></tr>
+            <tr><td><strong>Aire Acondicionado</strong></td><td><?php echo $fila['ac']; ?></td></tr>
+            <tr><td><strong>Microfono</strong></td><td><?php echo $fila['microfono']; ?></td></tr>
+            <tr><td><strong>Estado</strong></td><td><?php echo $fila['estado']; ?></td></tr>
+            <tr><td><strong>Sector</strong></td><td><?php echo $fila['sector']; ?></td></tr>
+            
+
+
             <tr><td><strong>PDF visible</strong></td><td><?php if($fila['Download']=="yes"){ echo "Si es visible"; }else{ echo "No es visible"; } ?></td></tr>
         </tbody>
   </table>
