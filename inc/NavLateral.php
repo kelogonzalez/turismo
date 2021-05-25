@@ -166,12 +166,20 @@
                     </ul>
                 </li>
 
--->
+
 <li>
     <a href="<?php echo $LinkRoute; ?>/turismo/localizador/index.html">
         <i class="zmdi zmdi-pin zmdi-hc-fw"></i>&nbsp;&nbsp; Localizador en Mapa
     </a>
 </li>
+-->
+
+<li>
+    <a href="<?php echo $LinkRoute; ?>/turismo/flujo/index.html">
+        <i class="zmdi zmdi-airplane zmdi-hc-fw"></i>&nbsp;&nbsp; Flujo de Turistas
+    </a>
+</li>
+
 
                 <li>
                     <a href="<?php echo $LinkRouteAdmin; ?>adminreport.php">

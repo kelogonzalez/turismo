@@ -7,20 +7,9 @@
 
 	$conexion=mysqli_connect('localhost','root','','phpdesdecero');
 
-	//Conexion a libreria
+	//cantidad de paginas
 
-	require_once("paginacion/PHPPaging.lib/PHPPaging.lib.php");
-	require_once("logica/conect.php");
 
-	$pagina = new PHPPaging;
-
-	$pagina->agregarConsulta("SELECT * FROM clientes");
-	$pagina->ejecutar();
-	while($res=$pagina->fetchResultado()){
-		echo $res['nombre'].'<br>';
-
-	}
-	echo 'Paginas '.$pagina->fetchNavegacion();
  ?>
 
 
@@ -46,6 +35,9 @@
 			<th scope="col">Total de personas</td>
 			<th scope="col">Lugar de procedencia</td>
 		</tr>
+
+
+
 
 		<?php
 		$sql="SELECT * from clientes";
