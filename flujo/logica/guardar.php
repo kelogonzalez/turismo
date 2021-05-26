@@ -8,7 +8,7 @@
  $ninos = $_POST['ninos'];
  $adultosmayores  = $_POST['adultosmayores'];
  $procedencia  = $_POST['procedencia'];
- $total  = $adultos + $ninos + $adultosmayores['total'];
+ $total  = $adultos + $ninos + $adultosmayores;
 
 $insertar = "INSERT INTO clientes VALUES ('$nombre','$mes','$anios','$adultos','$ninos','$adultosmayores','$procedencia','$total') ";
 
